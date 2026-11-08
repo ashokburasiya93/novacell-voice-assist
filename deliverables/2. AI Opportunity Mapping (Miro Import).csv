@@ -1,0 +1,61 @@
+﻿Frame,Type,Title,Text,Color,Impact,Feasibility,Score,Quadrant
+1 Header,Sticky,Persona,"Meena, prepaid customer in Ahmedabad (synthetic). Speaks Gujarati and Hindi, mixes in English product words; prefers voice to typing.",yellow,,,,
+1 Header,Sticky,Root cause,"Self-service is English-only text, so customers who speak Hindi or Gujarati call 611 for answers that already exist.",yellow,,,,
+1 Header,Sticky,Evidence,Synthetic: 28 of 30 test questions are answerable from the verified KB in English; none can be asked by voice or in Hindi/Gujarati today.,yellow,,,,
+1 Header,Sticky,Goal,Find where speech and language AI make self-service usable in Hindi and Gujarati without inventing answers.,yellow,,,,
+2 Workflow,Sticky,S1 Problem happens | Today,"Data slows, bill looks high, SIM stops.",gray,,,,
+2 Workflow,Sticky,S1 Problem happens | Pain,No help in her language on the phone.,red,,,,
+2 Workflow,Sticky,S1 Problem happens | AI opportunities,"O1, O2",light_green,,,,
+2 Workflow,Sticky,S2 Look for help | Today,Opens app or FAQ; English text only.,gray,,,,
+2 Workflow,Sticky,S2 Look for help | Pain,Can't read or search it comfortably.,red,,,,
+2 Workflow,Sticky,S2 Look for help | AI opportunities,"O1, O3",light_green,,,,
+2 Workflow,Sticky,S3 Ask the question | Today,"Calls 611, waits for a Hindi/Gujarati agent.",gray,,,,
+2 Workflow,Sticky,S3 Ask the question | Pain,Long wait for a 30-second answer.,red,,,,
+2 Workflow,Sticky,S3 Ask the question | AI opportunities,"O1, O2, O4",light_green,,,,
+2 Workflow,Sticky,S4 Get the answer | Today,Agent reads the FAQ answer aloud.,gray,,,,
+2 Workflow,Sticky,S4 Get the answer | Pain,Agent time spent on repeat questions.,red,,,,
+2 Workflow,Sticky,S4 Get the answer | AI opportunities,"O4, O5",light_green,,,,
+2 Workflow,Sticky,S5 Account issues | Today,"Refunds, cancellations handled by agents.",gray,,,,
+2 Workflow,Sticky,S5 Account issues | Pain,Must stay with humans.,red,,,,
+2 Workflow,Sticky,S5 Account issues | AI opportunities,O6,light_green,,,,
+3 Opportunities,Card,"O1 Speech-to-text for Hindi, Gujarati, Hinglish",Whisper large-v3 on Groq with a product-word prompt. Why AI: deep-learning ASR is mature for these languages; old IVRs failed on mixed speech. Evidence: 9 of 30 lines mix English product words Stage: S1-S3,blue,5,4,20,Do first (MVP)
+3 Opportunities,Card,O2 Understand mixed-language questions,LLM turns the transcript into one clear English question for the existing grounded search. Why AI: code-mixing defeats keyword search. Evidence: 'Mera eSIM activate nahi ho raha' Stage: S3,blue,5,4,20,Do first (MVP)
+3 Opportunities,Card,O3 Reuse the verified NovaCell assistant,"Same grounded answers, citations, guardrails and handoff. Why AI: no new knowledge to maintain. Evidence: 100% grounding on its evals Stage: S2-S4",blue,5,5,25,Do first (MVP)
+3 Opportunities,Card,O4 Answer back in the caller's language,"Translate the verified answer; every number, code and menu path checked. Why AI: one source of truth, three languages. Evidence: prices and codes must not change Stage: S4",blue,4,4,16,Do first (MVP)
+3 Opportunities,Card,O5 Read the answer aloud,"Device text-to-speech (hi-IN, gu-IN). Why AI: free, no audio leaves the phone. Evidence: prefers voice Stage: S4",blue,3,5,15,Quick add-on
+3 Opportunities,Card,O6 Agent handoff for account actions,Refund or cancel requests go to 611 / chat. Why AI: rule-based guard already in the assistant. Evidence: account actions need verification Stage: S5,blue,5,5,25,Do first (MVP)
+3 Opportunities,Card,O7 Speech-model choice by measurement,"Compare large-v3 vs turbo, with/without prompt, on clean and noisy clips. Why AI: 2.8x cost difference. Evidence: WER/CER per language Stage: S3",blue,4,4,16,Do first (MVP)
+3 Opportunities,Card,O8 Neural voice replies (cloud TTS),"Natural Hindi/Gujarati voices. Why AI: nicer, but costs and sends text to another vendor. Evidence: device voices vary Stage: S4",blue,3,3,9,Plan next
+3 Opportunities,Card,O9 Full phone IVR integration,"Answer real phone calls. Why AI: high value, needs telephony and latency work. Evidence: post-pilot Stage: S3",blue,5,2,10,Plan next
+3 Opportunities,Card,O10 Voice login / speaker ID,Verify the caller by voice. Why AI: biometric risk; not needed for public help. Evidence: out of scope Stage: S5,blue,2,1,2,Park / avoid
+4 Scoring,Sticky,Scoring rubric,Impact (1-5): calls avoided + how many customers + evidence. Feasibility (1-5): model maturity for Hindi/Gujarati + cost of being wrong + build effort. Do first = Impact >= 4 and Feasibility >= 4.,yellow,,,,
+5 Impact x Feasibility 2x2,Sticky,O3 Reuse the verified NovaCell assistant,I5 x F5 = 25,green,5,5,25,Do first (MVP)
+5 Impact x Feasibility 2x2,Sticky,O6 Agent handoff for account actions,I5 x F5 = 25,green,5,5,25,Do first (MVP)
+5 Impact x Feasibility 2x2,Sticky,"O1 Speech-to-text for Hindi, Gujarati, Hinglish",I5 x F4 = 20,green,5,4,20,Do first (MVP)
+5 Impact x Feasibility 2x2,Sticky,O2 Understand mixed-language questions,I5 x F4 = 20,green,5,4,20,Do first (MVP)
+5 Impact x Feasibility 2x2,Sticky,O4 Answer back in the caller's language,I4 x F4 = 16,green,4,4,16,Do first (MVP)
+5 Impact x Feasibility 2x2,Sticky,O7 Speech-model choice by measurement,I4 x F4 = 16,green,4,4,16,Do first (MVP)
+5 Impact x Feasibility 2x2,Sticky,O5 Read the answer aloud,I3 x F5 = 15,light_blue,3,5,15,Quick add-on
+5 Impact x Feasibility 2x2,Sticky,O9 Full phone IVR integration,I5 x F2 = 10,yellow,5,2,10,Plan next
+5 Impact x Feasibility 2x2,Sticky,O8 Neural voice replies (cloud TTS),I3 x F3 = 9,yellow,3,3,9,Plan next
+5 Impact x Feasibility 2x2,Sticky,O10 Voice login / speaker ID,I2 x F1 = 2,gray,2,1,2,Park / avoid
+6 Should / Should NOT,Sticky,Should do,"Understand Hindi, Gujarati, Hinglish and English speech.",green,,,,
+6 Should / Should NOT,Sticky,Should do,"Answer only from NovaCell's verified content, with sources.",green,,,,
+6 Should / Should NOT,Sticky,Should do,Reply in the caller's language with numbers and codes unchanged.,green,,,,
+6 Should / Should NOT,Sticky,Should do,Hand account actions to an agent.,green,,,,
+6 Should / Should NOT,Sticky,Should do,Pick the speech model by measured error rate and cost.,green,,,,
+6 Should / Should NOT,Sticky,Should NOT do,Store or reuse customer audio.,red,,,,
+6 Should / Should NOT,Sticky,Should NOT do,Act on the customer's account.,red,,,,
+6 Should / Should NOT,Sticky,Should NOT do,Guess when the verified content has no answer.,red,,,,
+6 Should / Should NOT,Sticky,Should NOT do,Follow instructions spoken into it.,red,,,,
+6 Should / Should NOT,Sticky,Should NOT do,Show a translation that changed a price or code.,red,,,,
+7 Feature to AI to Guardrails,Table row,F1 Listen,"From: O1, O7 | AI capability: Deep-learning ASR (Whisper large-v3 on Groq) + product-word prompt | Output: transcript + language | Guardrails: audio not stored; 30 s cap | Test: WER/CER by language on clean and noisy clips",violet,,,,
+7 Feature to AI to Guardrails,Table row,F2 Understand,From: O2 | AI capability: LLM normalisation to an English question (gpt-oss-20b) | Guardrails: injection and emergency checks on original and English text | Test: task success on 54 text cases,violet,,,,
+7 Feature to AI to Guardrails,Table row,F3 Answer,"From: O3, O6 | AI capability: existing grounded assistant (BM25 + gpt-oss-120b + checks) | Guardrails: citations, number checks, agent handoff | Test: right outcome per case",violet,,,,
+7 Feature to AI to Guardrails,Table row,F4 Reply,"From: O4, O5 | AI capability: LLM translation + number check, device TTS | Guardrails: English fallback if any number changes | Test: reply in caller's language rate",violet,,,,
+8 Guardrails & risks,Sticky,Mishearing product words,Product-word prompt; measured with/without; caller sees and can edit the transcript.,orange,,,,
+8 Guardrails & risks,Sticky,Wrong number after translation,Every number and code checked; English fallback.,orange,,,,
+8 Guardrails & risks,Sticky,Spoken prompt injection,Checked on the original words and again in English.,orange,,,,
+8 Guardrails & risks,Sticky,Privacy of voice,"Audio sent once for transcription, never stored or logged.",orange,,,,
+8 Guardrails & risks,Sticky,Optimistic test audio,Synthetic TTS clips are clean; noisy copies added; real-caller pilot before launch.,orange,,,,
+9 Hand-off,Sticky,To the PRD,Build F1-F4; measure O7; plan O8 and O9 after a pilot.,yellow,,,,
