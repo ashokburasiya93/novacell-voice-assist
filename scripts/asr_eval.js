@@ -1,12 +1,12 @@
 // Speech-model evals on the recorded clips. For each clip and each configuration
 // (whisper-large-v3 / whisper-large-v3-turbo, with / without the domain-word prompt) it transcribes through the
 // deployment, scores WER and CER against the reference, then sends the large-v3+prompt transcript through /api/ask.
-// Usage: node scripts/asr_eval.js <deployment URL> <folder with HI-01.m4a ...>
+// Usage: node scripts/asr_eval.js <deployment URL> <folder with HI-01.wav ...> [clean|noisy]
 import { readFileSync, readdirSync, writeFileSync, mkdirSync } from "node:fs";
 import { join, extname } from "node:path";
 import { wer, cer, judge } from "../lib/evals.js";
 
-const [base, dir] = [process.argv[2].replace(/\/$/, ""), process.argv[3]];
+const [base, dir, label = "clean"] = [process.argv[2].replace(/\/$/, ""), process.argv[3], process.argv[4]];
 const clips = JSON.parse(readFileSync(new URL("../evals/clips.json", import.meta.url), "utf8"));
 const files = Object.fromEntries(readdirSync(dir).map((f) => [f.replace(extname(f), "").toUpperCase(), join(dir, f)]));
 const MIME = { ".m4a": "audio/mp4", ".mp3": "audio/mpeg", ".wav": "audio/wav", ".webm": "audio/webm", ".ogg": "audio/ogg", ".aac": "audio/aac", ".mp4": "audio/mp4" };
@@ -44,5 +44,5 @@ for (const cfg of Object.keys(rows[0]?.asr || {})) {
 }
 const e2e = { clips: rows.length, task_success: +(rows.filter((r) => r.end_to_end.pass).length / rows.length).toFixed(3), language_ok: +(rows.filter((r) => r.end_to_end.language_ok).length / rows.length).toFixed(3) };
 mkdirSync(new URL("../evals/results/", import.meta.url), { recursive: true });
-writeFileSync(new URL("../evals/results/asr.json", import.meta.url), JSON.stringify({ run_at: new Date().toISOString(), summary, end_to_end: e2e, rows }, null, 1));
+writeFileSync(new URL(`../evals/results/asr_${label}.json`, import.meta.url), JSON.stringify({ run_at: new Date().toISOString(), summary, end_to_end: e2e, rows }, null, 1));
 console.log(JSON.stringify({ summary, e2e }, null, 1));
