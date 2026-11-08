@@ -7,6 +7,7 @@ import { join, extname } from "node:path";
 import { wer, cer, judge } from "../lib/evals.js";
 
 const [base, dir, label = "clean"] = [process.argv[2].replace(/\/$/, ""), process.argv[3], process.argv[4]];
+const E2E = !process.argv.includes("--asr-only");
 const clips = JSON.parse(readFileSync(new URL("../evals/clips.json", import.meta.url), "utf8"));
 const files = Object.fromEntries(readdirSync(dir).map((f) => [f.replace(extname(f), "").toUpperCase(), join(dir, f)]));
 const MIME = { ".m4a": "audio/mp4", ".mp3": "audio/mpeg", ".wav": "audio/wav", ".webm": "audio/webm", ".ogg": "audio/ogg", ".aac": "audio/aac", ".mp4": "audio/mp4" };
@@ -27,7 +28,7 @@ for (const c of clips) {
     await sleep(3500);
   }
   const best = row.asr["large-v3+prompt"];
-  const a = await post("/api/ask", { text: best.text || "" });
+  const a = E2E ? await post("/api/ask", { text: best.text || "" }) : { status: "skipped" };
   row.end_to_end = { status: a.status, reply_language: a.reply_language, citations: a.citations, english_query: a.english_query, latency_ms: (best.latency_ms || 0) + (a.latencyMs || 0), ...judge(c, a) };
   rows.push(row);
   console.log(c.id, Object.entries(row.asr).map(([k, v]) => `${k}:${v.words ? (v.wer_errors / v.words).toFixed(2) : "?"}`).join(" "), row.end_to_end.pass);
@@ -42,7 +43,7 @@ for (const cfg of Object.keys(rows[0]?.asr || {})) {
     (summary[cfg] ||= {})[lang] = { clips: sel.length, wer: +(s("wer_errors") / s("words")).toFixed(3), cer: +(s("cer_errors") / s("chars")).toFixed(3), p95_ms: lat[Math.floor(0.95 * (lat.length - 1))] };
   }
 }
-const e2e = { clips: rows.length, task_success: +(rows.filter((r) => r.end_to_end.pass).length / rows.length).toFixed(3), language_ok: +(rows.filter((r) => r.end_to_end.language_ok).length / rows.length).toFixed(3) };
+const e2e = !E2E ? { skipped: true } : { clips: rows.length, task_success: +(rows.filter((r) => r.end_to_end.pass).length / rows.length).toFixed(3), language_ok: +(rows.filter((r) => r.end_to_end.language_ok).length / rows.length).toFixed(3) };
 mkdirSync(new URL("../evals/results/", import.meta.url), { recursive: true });
 writeFileSync(new URL(`../evals/results/asr_${label}.json`, import.meta.url), JSON.stringify({ run_at: new Date().toISOString(), summary, end_to_end: e2e, rows }, null, 1));
 console.log(JSON.stringify({ summary, e2e }, null, 1));
