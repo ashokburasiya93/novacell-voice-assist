@@ -7,7 +7,10 @@ import { transcribe, ASR_MODELS } from "../lib/voice.js";
 import { wer, cer } from "../lib/evals.js";
 
 const CLIPS = JSON.parse(readFileSync(new URL("../evals/clips.json", import.meta.url), "utf8"));
-const CONFIGS = [["large-v3", true], ["large-v3", false], ["turbo", true], ["turbo", false]];
+// [model, product-word prompt, language hint]. The hint is what the caller's language button sends.
+const CONFIGS = [["large-v3", true, true], ["large-v3", true, false], ["large-v3", false, false], ["turbo", true, true], ["turbo", false, false]];
+const hintFor = (id) => (id.startsWith("HI") ? "hi" : id.startsWith("GU") ? "gu" : ["HE-06", "HE-07", "HE-08", "HE-09", "HE-10"].includes(id) ? "en" : undefined);
+const scriptOf = (t) => (/[\u0600-\u06FF]/.test(t) ? "arabic" : /[\u0A80-\u0AFF]/.test(t) ? "gujarati" : /[\u0900-\u097F]/.test(t) ? "devanagari" : "latin");
 export const config = { maxDuration: 300 };
 
 export default async function handler(req, res) {
@@ -20,12 +23,12 @@ export default async function handler(req, res) {
   for (const c of CLIPS.slice(from, from + n)) {
     const audio = Buffer.from(await (await fetch(`${base}/${set}/${c.id}.wav`)).arrayBuffer());
     const row = { id: c.id };
-    for (const [m, prompt] of CONFIGS) {
-      const key = `${m}${prompt ? "+prompt" : ""}`;
+    for (const [m, prompt, hint] of CONFIGS) {
+      const key = `${m}${prompt ? "+prompt" : ""}${hint ? "+lang" : ""}`;
       try {
-        const r = await transcribe(audio, "audio/wav", { model: ASR_MODELS[m], prompt });
+        const r = await transcribe(audio, "audio/wav", { model: ASR_MODELS[m], prompt, language: hint ? hintFor(c.id) : undefined });
         const w = wer(c.text, r.text), ch = cer(c.text, r.text);
-        row[key] = [w.errors, w.words, ch.errors, ch.chars, r.latencyMs, r.language, key === "large-v3+prompt" ? r.text : undefined];
+        row[key] = [w.errors, w.words, ch.errors, ch.chars, r.latencyMs, scriptOf(r.text), key.startsWith("large-v3+prompt") ? r.text : undefined];
       } catch (e) {
         row[key] = { error: String(e.message).slice(0, 120) };
       }
