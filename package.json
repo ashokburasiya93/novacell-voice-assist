@@ -1,0 +1,9 @@
+{
+  "name": "novacell-voice-assist",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Hindi, Gujarati and Hinglish voice support for NovaCell: Whisper speech recognition, grounded answers, replies in the caller's language",
+  "engines": { "node": ">=20" },
+  "scripts": { "test": "node scripts/test_text.js", "dev": "node scripts/dev_server.js" }
+}

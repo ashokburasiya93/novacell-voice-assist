@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NovaCell Voice Assist · हिंदी · ગુજરાતી · English</title>
+<meta name="description" content="Ask NovaCell support by voice in Hindi, Gujarati, Hinglish or English. Speech recognition with Whisper, answers only from NovaCell's verified knowledge, replies in your language. Synthetic data.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230f766e'/><rect x='12' y='6' width='8' height='14' rx='4' fill='white'/><path d='M9 15a7 7 0 0 0 14 0M16 22v4' stroke='white' stroke-width='2.2' fill='none' stroke-linecap='round'/></svg>">
+<style>
+:root{--bg:#f6f7f9;--panel:#fff;--ink:#14181f;--muted:#5b6472;--line:#e3e6eb;--brand:#0f766e;--brand-soft:#e6f4f2;--ok:#15803d;--ok-soft:#e8f6ec;--warn:#b45309;--warn-soft:#fdf3e4;--bad:#b91c1c;--bad-soft:#fdecec;--info:#1d4ed8;--info-soft:#e9effd;--shadow:0 1px 2px rgba(16,24,40,.06),0 1px 3px rgba(16,24,40,.08)}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1216;--panel:#171b21;--ink:#e7eaee;--muted:#9aa4b2;--line:#2a313b;--brand:#2dd4bf;--brand-soft:#11312e;--ok:#4ade80;--ok-soft:#12291a;--warn:#fbbf24;--warn-soft:#2d230f;--bad:#f87171;--bad-soft:#2f1515;--info:#93b4ff;--info-soft:#18213a;--shadow:none}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 system-ui,-apple-system,"Segoe UI","Noto Sans Devanagari","Noto Sans Gujarati",Roboto,sans-serif}
+header{display:flex;align-items:center;gap:12px;padding:12px 18px;background:var(--panel);border-bottom:1px solid var(--line);flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:10px;font-weight:650}.logo svg{width:30px;height:30px}.logo small{display:block;font-weight:400;color:var(--muted);font-size:12px}
+.chips{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap;font-size:12px}.chip{border:1px solid var(--line);border-radius:999px;padding:3px 10px;background:var(--bg);color:var(--muted);white-space:nowrap}.chip b{color:var(--ink)}
+.dot::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--muted);margin-right:6px}.dot.live::before{background:var(--ok)}.dot.down::before{background:var(--bad)}
+nav{display:flex;gap:4px;padding:0 18px;background:var(--panel);border-bottom:1px solid var(--line)}nav button{border:0;background:none;padding:10px 14px;font:inherit;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent}nav button.on{color:var(--ink);border-bottom-color:var(--brand);font-weight:600}
+main{max-width:820px;margin:0 auto;padding:18px 16px 40px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;box-shadow:var(--shadow);margin-bottom:14px}
+h1{font-size:20px;margin:0 0 4px}.muted{color:var(--muted)}.small{font-size:13px}
+.langs{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0}.langs button,.asr button{border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:999px;padding:5px 12px;font:inherit;cursor:pointer}.langs button.on,.asr button.on{background:var(--brand);color:#fff;border-color:var(--brand)}
+.mic{display:flex;align-items:center;gap:16px;margin:14px 0}
+#rec{width:84px;height:84px;border-radius:50%;border:0;background:var(--brand);color:#fff;cursor:pointer;display:grid;place-items:center;box-shadow:0 4px 14px rgba(15,118,110,.35)}
+#rec svg{width:34px;height:34px}#rec.live{background:var(--bad);animation:pulse 1.2s infinite}@keyframes pulse{50%{box-shadow:0 0 0 12px rgba(185,28,28,.15)}}
+.row{display:flex;gap:8px}.row input{flex:1;font:inherit;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:10px;padding:9px 12px}
+.btn{border:1px solid var(--brand);background:var(--brand);color:#fff;border-radius:10px;padding:8px 14px;font:inherit;font-weight:600;cursor:pointer}.btn.ghost{background:none;color:var(--brand)}.btn:disabled{opacity:.6}
+.tryme{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}.tryme button{border:1px dashed var(--line);background:none;color:var(--muted);border-radius:8px;padding:4px 9px;font:inherit;font-size:13px;cursor:pointer}
+.pill{border-radius:999px;padding:2px 9px;font-weight:600;font-size:12px}.s-answered{background:var(--ok-soft);color:var(--ok)}.s-partial,.s-needs_agent{background:var(--warn-soft);color:var(--warn)}.s-no_answer,.s-out_of_scope{background:var(--info-soft);color:var(--info)}.s-blocked,.s-emergency,.s-error,.s-no_speech{background:var(--bad-soft);color:var(--bad)}
+.k{font-size:12px;color:var(--muted);font-weight:600;margin-top:12px;text-transform:uppercase;letter-spacing:.04em}
+.reply{font-size:17px;white-space:pre-wrap}.en{white-space:pre-wrap;color:var(--muted);font-size:14px}
+.note{margin-top:10px;padding:8px 10px;border-radius:8px;font-size:13px;background:var(--warn-soft)}
+.src{border:1px solid var(--line);border-radius:10px;padding:8px 10px;margin-top:8px;font-size:13px}
+table{width:100%;border-collapse:collapse;font-size:13.5px}th,td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--line)}th{color:var(--muted);font-size:12px}td.n{text-align:right;font-variant-numeric:tabular-nums}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#0f766e"/><rect x="12" y="6" width="8" height="14" rx="4" fill="white"/><path d="M9 15a7 7 0 0 0 14 0M16 22v4" stroke="white" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg>
+    <div>NovaCell Voice Assist<small>हिंदी · ગુજરાતી · Hinglish · English · synthetic data</small></div></div>
+  <div class="chips" id="chips"><span class="chip">Loading…</span></div>
+</header>
+<nav><button class="on" data-t="ask">Ask</button><button data-t="lab">How the speech model was chosen</button></nav>
+<main>
+<section id="t-ask">
+  <div class="card">
+    <h1>बोलिए · બોલો · Speak</h1>
+    <p class="muted small">Ask about data, bills, SIM and eSIM, roaming, calls or the app, in Hindi, Gujarati, Hinglish or English. Answers come only from NovaCell's verified help content; anything about your own account goes to an agent.</p>
+    <div class="langs" id="langs"><button data-l="" class="on">Auto-detect</button><button data-l="hi">हिंदी</button><button data-l="gu">ગુજરાતી</button><button data-l="en">English</button></div>
+    <div class="mic"><button id="rec" aria-label="Hold to talk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="9" y="3" width="6" height="11" rx="3" fill="currentColor"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></button>
+      <div><b id="recState">Tap to talk</b><div class="muted small">Tap again to stop · up to 30 seconds · audio is not stored</div>
+      <div class="asr small" style="margin-top:6px">Speech model: <button data-a="large-v3" class="on">Whisper large-v3</button> <button data-a="turbo">large-v3 turbo</button></div></div></div>
+    <div class="row"><input id="txt" placeholder="…or type: मेरा डेटा बैलेंस कैसे चेक करूं?" aria-label="Type a question"><button class="btn" id="send">Ask</button></div>
+    <div class="tryme" id="tryme"></div>
+  </div>
+  <div id="out"></div>
+</section>
+<section id="t-lab" hidden><div class="card" id="lab"><p class="muted">Loading results…</p></div></section>
+<p class="muted small" style="max-width:820px;margin:0 auto;padding:0 16px 30px">How it works: your voice is transcribed by OpenAI's Whisper (a deep-learning speech model) running on Groq, with NovaCell product words as a hint. The question is turned into English, answered by NovaCell's grounded support assistant (keyword search over the verified FAQ, guide, tickets and plans, then gpt-oss-120b with number and promise checks), and translated back with every number and code checked. Your phone or browser reads it aloud. All data is synthetic.</p>
+</main>
+<script>
+const $ = (s) => document.querySelector(s);
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+let LANG = "", ASR = "large-v3", rec = null, chunks = [], timer = null;
+const VOICE = { hi: "hi-IN", gu: "gu-IN", en: "en-IN" };
+const SAMPLES = ["मेरा डेटा बैलेंस कैसे चेक करूं?", "મારું બિલ વધારે કેમ આવ્યું?", "Mera eSIM activate nahi ho raha", "Please refund the roaming charge on my bill"];
+$("#tryme").innerHTML = SAMPLES.map((s) => `<button>${esc(s)}</button>`).join("");
+$("#tryme").onclick = (e) => { if (e.target.tagName === "BUTTON") { $("#txt").value = e.target.textContent; ask(); } };
+document.querySelectorAll("nav button").forEach((b) => b.onclick = () => { document.querySelectorAll("nav button").forEach((x) => x.classList.toggle("on", x === b)); $("#t-ask").hidden = b.dataset.t !== "ask"; $("#t-lab").hidden = b.dataset.t !== "lab"; });
+$("#langs").onclick = (e) => { if (!e.target.dataset) return; LANG = e.target.dataset.l ?? LANG; document.querySelectorAll("#langs button").forEach((x) => x.classList.toggle("on", x === e.target)); };
+document.querySelectorAll(".asr button").forEach((b) => b.onclick = () => { ASR = b.dataset.a; document.querySelectorAll(".asr button").forEach((x) => x.classList.toggle("on", x === b)); });
+$("#send").onclick = ask; $("#txt").onkeydown = (e) => e.key === "Enter" && ask();
+
+(async () => {
+  try {
+    const h = await (await fetch("/api/health")).json();
+    $("#chips").innerHTML = `<span class="chip dot ${h.keys.groq ? "live" : "down"}">Speech <b>${esc(h.asr["large-v3"])}</b> · Groq</span><span class="chip dot ${h.keys.groq ? "live" : "down"}">Answers <b>${esc(h.models.primary.model.replace("openai/", ""))}</b></span><span class="chip dot ${h.keys.openrouter ? "live" : "down"}">Fallback <b>${esc(h.models.secondary.model.replace("openai/", ""))}</b> → <b>${esc(h.models.fallback.model.split("/").pop().replace(":free", ""))}</b></span>`;
+  } catch { $("#chips").innerHTML = `<span class="chip dot down">API unreachable</span>`; }
+  lab();
+})();
+
+$("#rec").onclick = async () => {
+  if (rec && rec.state === "recording") return rec.stop();
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    const type = ["audio/webm;codecs=opus", "audio/mp4", "audio/webm"].find((t) => MediaRecorder.isTypeSupported(t)) || "";
+    rec = new MediaRecorder(stream, type ? { mimeType: type } : {}); chunks = [];
+    rec.ondataavailable = (e) => chunks.push(e.data);
+    rec.onstop = async () => {
+      clearTimeout(timer); stream.getTracks().forEach((t) => t.stop()); $("#rec").classList.remove("live"); $("#recState").textContent = "Listening done · thinking…";
+      const blob = new Blob(chunks, { type: rec.mimeType || "audio/webm" });
+      const b64 = await new Promise((r) => { const fr = new FileReader(); fr.onload = () => r(String(fr.result).split(",")[1]); fr.readAsDataURL(blob); });
+      show({ pending: true });
+      const res = await (await fetch("/api/voice", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ audio: b64, mime: blob.type, language: LANG || undefined, asr: ASR }) })).json();
+      $("#recState").textContent = "Tap to talk"; show(res);
+    };
+    rec.start(); $("#rec").classList.add("live"); $("#recState").textContent = "Listening… tap to stop";
+    timer = setTimeout(() => rec.state === "recording" && rec.stop(), 30000);
+  } catch { $("#recState").textContent = "Microphone not available: type your question instead"; }
+};
+
+async function ask() {
+  const text = $("#txt").value.trim(); if (!text) return;
+  show({ pending: true });
+  const res = await (await fetch("/api/ask", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ text, language: LANG || undefined }) })).json();
+  show({ ...res, typed: text });
+}
+
+function speak(text, lang) {
+  if (!("speechSynthesis" in window)) return alert("This browser can't read aloud.");
+  speechSynthesis.cancel(); const u = new SpeechSynthesisUtterance(text); u.lang = VOICE[lang] || "en-IN";
+  const v = speechSynthesis.getVoices().find((x) => x.lang?.toLowerCase().startsWith(u.lang.slice(0, 2))); if (v) u.voice = v; else if (lang !== "en") alert("No " + (lang === "gu" ? "Gujarati" : "Hindi") + " voice on this device; showing text only.");
+  speechSynthesis.speak(u);
+}
+
+function show(r) {
+  if (r.pending) { $("#out").innerHTML = `<div class="card muted">Working on it…</div>`; return; }
+  const label = { answered: "Answered", partial: "Partly answered", needs_agent: "Needs an agent", no_answer: "Not in verified help", out_of_scope: "Outside NovaCell support", blocked: "Blocked", emergency: "Emergency", error: "Error", no_speech: "No speech heard" }[r.status] || r.status;
+  window._last = r;
+  $("#out").innerHTML = `<div class="card">
+    <span class="pill s-${esc(r.status)}">${esc(label)}</span> ${r.language ? `<span class="muted small">language: ${esc({ hi: "Hindi", gu: "Gujarati", en: "English" }[r.language] || r.language)}</span>` : ""}
+    ${r.transcript !== undefined ? `<div class="k">We heard (${esc(r.asr?.model || "")}, ${((r.asr?.latencyMs || 0) / 1000).toFixed(1)} s)</div><div>${esc(r.transcript) || "<span class=muted>nothing</span>"}</div>` : ""}
+    ${r.english_query && r.english_query !== (r.transcript || r.typed) ? `<div class="k">Understood as</div><div class="small">${esc(r.english_query)}</div>` : ""}
+    <div class="k">Answer</div><div class="reply">${esc(r.reply || r.answer || r.error || "")}</div>
+    ${r.reply ? `<div style="margin-top:10px;display:flex;gap:8px"><button class="btn ghost" onclick="speak(_last.reply,_last.reply_language)">🔊 Read aloud</button></div>` : ""}
+    ${r.reply_language && r.reply_language !== "en" && r.answer_en ? `<details style="margin-top:10px"><summary class="small muted">Verified English answer</summary><div class="en">${esc(r.answer_en)}</div></details>` : ""}
+    ${r.guardrailNote ? `<div class="note">${esc(r.guardrailNote)}</div>` : ""}
+    ${(r.sources || []).length ? `<details style="margin-top:10px"><summary class="small muted">Sources (${r.sources.length})</summary>${r.sources.map((s) => `<div class="src"><b>${esc(s.id)}</b> · ${esc(s.title)}<div class="muted">${esc(s.snippet)}</div></div>`).join("")}</details>` : ""}
+    ${r.modelUsed ? `<p class="muted small" style="margin:10px 0 0">Answer by ${esc(r.modelUsed.model)} · ${(r.latencyMs / 1000).toFixed(1)} s total</p>` : ""}</div>`;
+}
+
+async function lab() {
+  let d;
+  try { d = await (await fetch("asr_results.json")).json(); } catch { $("#lab").innerHTML = `<h1>Speech model comparison</h1><p class="muted">Results appear here after the recorded test clips (10 Hindi, 10 Gujarati, 10 Hinglish/English) are run through each model.</p>`; return; }
+  const cfgs = Object.keys(d.summary);
+  $("#lab").innerHTML = `<h1>Which speech model, and does the product-word hint help?</h1>
+    <p class="muted small">${d.end_to_end.clips} recorded clips. Word error rate (WER) and character error rate (CER): lower is better. Cost is Groq's list price per hour of audio.</p>
+    <table><thead><tr><th>Configuration</th><th class="n">WER Hindi</th><th class="n">WER Gujarati</th><th class="n">WER Hinglish/En</th><th class="n">CER all</th><th class="n">p95</th><th class="n">$/hour</th></tr></thead><tbody>
+    ${cfgs.map((c) => { const s = d.summary[c]; return `<tr><td>${esc(c)}</td><td class="n">${(s["hi-script"].wer * 100).toFixed(1)}%</td><td class="n">${(s.gu.wer * 100).toFixed(1)}%</td><td class="n">${(s["hinglish-en"].wer * 100).toFixed(1)}%</td><td class="n">${(s.all.cer * 100).toFixed(1)}%</td><td class="n">${(s.all.p95_ms / 1000).toFixed(1)} s</td><td class="n">$${c.startsWith("turbo") ? "0.04" : "0.111"}</td></tr>`; }).join("")}</tbody></table>
+    <p style="margin-top:14px"><b>End to end</b> (speech → answer in the caller's language): ${(d.end_to_end.task_success * 100).toFixed(0)}% of clips got the right outcome.</p>`;
+}
+</script>
+</body>
+</html>

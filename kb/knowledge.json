@@ -1,0 +1,1035 @@
+{
+ "version": 1,
+ "chunks": [
+  {
+   "id": "FAQ-01",
+   "type": "faq",
+   "title": "How do I check my current data balance?",
+   "text": "Q: How do I check my current data balance?\nA: Dial *123# from your mobile or log in to the MyTelecom app and go to My Usage. Your remaining data balance will be shown on the dashboard.",
+   "category": "data",
+   "source": "Public FAQ",
+   "synthetic": false,
+   "priority": 2
+  },
+  {
+   "id": "FAQ-02",
+   "type": "faq",
+   "title": "Why is my mobile internet so slow?",
+   "text": "Q: Why is my mobile internet so slow?\nA: Slow speeds are usually caused by network congestion in your area, being in a low-signal zone, or reaching your high-speed data cap. Try toggling airplane mode off and on to force a network reconnect. If your high-speed data is exhausted your speed is throttled to 512 kbps.",
+   "category": "data",
+   "source": "Public FAQ",
+   "synthetic": false,
+   "priority": 2
+  },
+  {
+   "id": "FAQ-03",
+   "type": "faq",
+   "title": "How do I activate 4G/LTE on my phone?",
+   "text": "Q: How do I activate 4G/LTE on my phone?\nA: Go to Settings > Mobile Network > Preferred Network Type and select 4G/LTE. Make sure your SIM supports 4G and your plan includes it. If the option is missing, contact support to check your account.",
+   "category": "connectivity",
+   "source": "Public FAQ",
+   "synthetic": false,
+   "priority": 2
+  },
+  {
+   "id": "FAQ-04",
+   "type": "faq",
+   "title": "What should I do if I have no signal at home?",
+   "text": "Q: What should I do if I have no signal at home?\nA: First check our coverage map at telecom.example.com/coverage. If coverage is shown as good in your area try restarting your phone and reseating the SIM card. Persistent issues may require a network investigation - call 611.",
+   "category": "connectivity",
+   "source": "Public FAQ",
+   "synthetic": false,
+   "priority": 2
+  },
+  {
+   "id": "FAQ-05",
+   "type": "faq",
+   "title": "How do I report a network outage?",
+   "text": "Q: How do I report a network outage?\nA: You can report an outage by calling 611, using the MyTelecom app under Help > Report an Issue, or tweeting @TelecomSupport. We will send an SMS once the outage is resolved.",
+   "category": "connectivity",
+   "source": "Public FAQ",
+   "synthetic": false,
+   "priority": 2
+  },
+  {
+   "id": "FAQ-06",
+   "type": "faq",
+   "title": "My calls keep dropping. What should I do?",
+   "text": "Q: My calls keep dropping. What should I do?\nA: Call drops are often caused by weak signal, SIM card faults, or a faulty device antenna. Try these steps: 1) Restart the phone 2) Reseat the SIM 3) Test with another SIM if possible 4) Check for network outages via the app.",
+   "category": "voice",
+   "source": "Public FAQ",
+   "synthetic": false,
+   "priority": 2
+  },
+  {
+   "id": "FAQ-07",
+   "type": "faq",
+   "title": "How do I enable Wi-Fi calling?",
+   "text": "Q: How do I enable Wi-Fi calling?\nA: Go to Settings > Phone > Wi-Fi Calling and toggle it on. Wi-Fi calling lets you make and receive calls over a Wi-Fi network when cellular signal is weak. Your plan must include this feature; if not, call 611 to add it.",
+   "category": "voice",
+   "source": "Public FAQ",
+   "synthetic": false,
+   "priority": 2
+  },
+  {
+   "id": "FAQ-08",
+   "type": "faq",
+   "title": "Why am I unable to make international calls?",
+   "text": "Q: Why am I unable to make international calls?\nA: International calling must be enabled on your account. Log in to the portal, go to Add-ons > International Calling and activate it. Calls are billed at per-minute rates by country unless you have an international bundle.",
+   "category": "roaming",
+   "source": "Public FAQ",
+   "synthetic": false,
+   "priority": 2
+  },
+  {
+   "id": "FAQ-09",
+   "type": "faq",
+   "title": "How do I activate international roaming?",
+   "text": "Q: How do I activate international roaming?\nA: Log in to MyTelecom > Plan & Services > International Roaming and toggle it on at least 24 hours before travel. Select a roaming bundle to avoid per-MB charges. Roaming is automatically disabled when you return home.",
+   "category": "roaming",
+   "source": "Public FAQ",
+   "synthetic": false,
+   "priority": 2
+  },
+  {
+   "id": "FAQ-10",
+   "type": "faq",
+   "title": "What are the roaming charges in the EU?",
+   "text": "Q: What are the roaming charges in the EU?\nA: Our EU Roaming Bundle costs $15/day and includes unlimited calls and texts within the EU plus 2 GB of data at local speeds. Without a bundle data is charged at $10/MB and calls at $1.50/minute.",
+   "category": "roaming",
+   "source": "Public FAQ",
+   "synthetic": false,
+   "priority": 2
+  },
+  {
+   "id": "FAQ-11",
+   "type": "faq",
+   "title": "How do I replace a lost or stolen SIM card?",
+   "text": "Q: How do I replace a lost or stolen SIM card?\nA: Report the loss by calling 611 immediately so we can block the SIM. Visit any store with a valid photo ID to get a replacement SIM. A fee of $5 applies. Your number and plan transfer to the new SIM automatically.",
+   "category": "sim",
+   "source": "Public FAQ",
+   "synthetic": false,
+   "priority": 2
+  },
+  {
+   "id": "FAQ-12",
+   "type": "faq",
+   "title": "How long does SIM activation take?",
+   "text": "Q: How long does SIM activation take?\nA: A new SIM card typically activates within 15 minutes of inserting it. If it has not activated after 1 hour restart the phone. If still inactive call 611 and quote your SIM serial number printed on the SIM card.",
+   "category": "sim",
+   "source": "Public FAQ",
+   "synthetic": false,
+   "priority": 2
+  },
+  {
+   "id": "FAQ-13",
+   "type": "faq",
+   "title": "Can I keep my number when switching to your network?",
+   "text": "Q: Can I keep my number when switching to your network?\nA: Yes. Number porting is free and usually completes within 2 hours on working days. Start the port by calling 611 or visiting a store. Keep your old SIM active until you receive an SMS confirming the port is complete.",
+   "category": "sim",
+   "source": "Public FAQ",
+   "synthetic": false,
+   "priority": 2
+  },
+  {
+   "id": "FAQ-14",
+   "type": "faq",
+   "title": "How do I upgrade my plan?",
+   "text": "Q: How do I upgrade my plan?\nA: Log in to MyTelecom > My Plan > Upgrade and select a new plan. Changes take effect at the start of your next billing cycle. You can also upgrade by calling 611. Downgrading follows the same process but takes effect next cycle.",
+   "category": "billing",
+   "source": "Public FAQ",
+   "synthetic": false,
+   "priority": 2
+  },
+  {
+   "id": "FAQ-15",
+   "type": "faq",
+   "title": "When is my bill due?",
+   "text": "Q: When is my bill due?\nA: Your bill is generated on your monthly anniversary date and payment is due 14 days later. You can check your exact due date in the MyTelecom app under Billing > Current Bill.",
+   "category": "billing",
+   "source": "Public FAQ",
+   "synthetic": false,
+   "priority": 2
+  },
+  {
+   "id": "FAQ-16",
+   "type": "faq",
+   "title": "Why is my bill higher than usual?",
+   "text": "Q: Why is my bill higher than usual?\nA: Common reasons for a higher bill: international roaming charges, premium SMS subscriptions, additional data packs purchased mid-cycle, or a plan change. Go to Billing > Itemised Bill in the app to see a full breakdown.",
+   "category": "billing",
+   "source": "Public FAQ",
+   "synthetic": false,
+   "priority": 2
+  },
+  {
+   "id": "FAQ-17",
+   "type": "faq",
+   "title": "How do I set up autopay?",
+   "text": "Q: How do I set up autopay?\nA: Go to MyTelecom > Billing > Payment Methods and add a credit or debit card. Then enable AutoPay. You will receive an SMS reminder 3 days before each payment is taken.",
+   "category": "billing",
+   "source": "Public FAQ",
+   "synthetic": false,
+   "priority": 2
+  },
+  {
+   "id": "FAQ-18",
+   "type": "faq",
+   "title": "How do I get an itemised bill?",
+   "text": "Q: How do I get an itemised bill?\nA: Log in to MyTelecom > Billing > Download Bill and select PDF. Itemised bills show every call, SMS, and data session with date, time, and cost. Bills are available for the last 12 months.",
+   "category": "billing",
+   "source": "Public FAQ",
+   "synthetic": false,
+   "priority": 2
+  },
+  {
+   "id": "FAQ-19",
+   "type": "faq",
+   "title": "How do I unlock my phone for use on another network?",
+   "text": "Q: How do I unlock my phone for use on another network?\nA: Phones purchased from us are unlocked after 60 days or when the device is paid off. Submit an unlock request via MyTelecom > Device > Request Unlock or call 611. Unlocking is free of charge.",
+   "category": "device",
+   "source": "Public FAQ",
+   "synthetic": false,
+   "priority": 2
+  },
+  {
+   "id": "FAQ-20",
+   "type": "faq",
+   "title": "My phone shows SIM not detected after a restart. What should I do?",
+   "text": "Q: My phone shows SIM not detected after a restart. What should I do?\nA: Power off the phone, remove and reseat the SIM card firmly, then power on again. If the error persists try the SIM in another phone to rule out SIM damage. If the SIM is fine the phone's SIM tray or slot may be faulty.",
+   "category": "sim",
+   "source": "Public FAQ",
+   "synthetic": false,
+   "priority": 2
+  },
+  {
+   "id": "FAQ-21",
+   "type": "faq",
+   "title": "How do I set up a personal hotspot?",
+   "text": "Q: How do I set up a personal hotspot?\nA: Go to Settings > Personal Hotspot and toggle it on. Set a Wi-Fi password. Note that hotspot usage counts against your monthly data allowance. Some plans restrict hotspot use - check your plan details in the app.",
+   "category": "data",
+   "source": "Public FAQ",
+   "synthetic": false,
+   "priority": 2
+  },
+  {
+   "id": "FAQ-22",
+   "type": "faq",
+   "title": "What is VoLTE and how do I enable it?",
+   "text": "Q: What is VoLTE and how do I enable it?\nA: VoLTE (Voice over LTE) provides HD voice calls over the 4G network. Enable it via Settings > Mobile Network > VoLTE. Your device and SIM must support VoLTE. If the option is greyed out call 611 to check compatibility.",
+   "category": "voice",
+   "source": "Public FAQ",
+   "synthetic": false,
+   "priority": 2
+  },
+  {
+   "id": "FAQ-23",
+   "type": "faq",
+   "title": "How do I block unwanted calls and texts?",
+   "text": "Q: How do I block unwanted calls and texts?\nA: You can block a number directly in your phone's call log or contacts app. For persistent spam report the number by texting STOP to 7726. We also offer a free Call Shield service - enable it in MyTelecom > Security.",
+   "category": "voice",
+   "source": "Public FAQ",
+   "synthetic": false,
+   "priority": 2
+  },
+  {
+   "id": "FAQ-24",
+   "type": "faq",
+   "title": "How do I check if there is a network outage in my area?",
+   "text": "Q: How do I check if there is a network outage in my area?\nA: Open the MyTelecom app > Help > Network Status and enter your postcode. Alternatively check our live status page at telecom.example.com/status. Planned maintenance windows are listed 48 hours in advance.",
+   "category": "connectivity",
+   "source": "Public FAQ",
+   "synthetic": false,
+   "priority": 2
+  },
+  {
+   "id": "FAQ-25",
+   "type": "faq",
+   "title": "How do I contact customer support?",
+   "text": "Q: How do I contact customer support?\nA: Call 611 (free from your mobile), use live chat in the MyTelecom app available 8am-10pm, email support@telecom.example.com, or visit any of our retail stores. Average call wait time is under 3 minutes.",
+   "category": "account",
+   "source": "Public FAQ",
+   "synthetic": false,
+   "priority": 2
+  },
+  {
+   "id": "FAQ-101",
+   "type": "faq",
+   "title": "How do I activate an eSIM?",
+   "text": "Q: How do I activate an eSIM?\nA: Use the QR code or activation code NovaCell sends you. On iPhone go to Settings > Mobile Data > Add eSIM; on Android go to Settings > Network & Internet > SIMs > Download a SIM. Stay connected to Wi-Fi while the profile downloads. Each eSIM QR code can be used only once, so if a scan fails do not keep retrying the same code - ask for a fresh activation code through live chat in the MyTelecom app or by calling 611.",
+   "category": "sim",
+   "source": "Public FAQ (synthetic extension)",
+   "synthetic": true,
+   "priority": 2
+  },
+  {
+   "id": "FAQ-102",
+   "type": "faq",
+   "title": "Can I use an eSIM and a physical SIM at the same time?",
+   "text": "Q: Can I use an eSIM and a physical SIM at the same time?\nA: Yes, on phones that support it. An eSIM can hold more than one profile, so you can keep your NovaCell line on one SIM and use a second line or a local SIM on the other, for example while travelling. Check that your phone supports dual SIM with eSIM before you start.",
+   "category": "sim",
+   "source": "Public FAQ (synthetic extension)",
+   "synthetic": true,
+   "priority": 2
+  },
+  {
+   "id": "FAQ-103",
+   "type": "faq",
+   "title": "What should I do before travelling abroad?",
+   "text": "Q: What should I do before travelling abroad?\nA: 1) Turn on International Roaming in MyTelecom > Plan & Services > International Roaming at least 24 hours before you travel. 2) Add a roaming pass before you use your phone abroad so you are not charged standard roaming rates. 3) Set Settings > Mobile Network > Network Selection to Automatic. 4) Check the coverage map to confirm your destination is covered.",
+   "category": "roaming",
+   "source": "Public FAQ (synthetic extension)",
+   "synthetic": true,
+   "priority": 2
+  },
+  {
+   "id": "FAQ-104",
+   "type": "faq",
+   "title": "I bought a roaming bundle but was still charged roaming fees. Why?",
+   "text": "Q: I bought a roaming bundle but was still charged roaming fees. Why?\nA: Usage abroad before the bundle was activated is charged at standard roaming rates, and those charges are not reversed when the bundle starts later the same day. Your itemised bill (Billing > Itemised Bill in the app) shows the time the bundle was activated and the time of your first usage abroad. If you believe the bundle was active before that usage, contact support on 611 so an agent can review it.",
+   "category": "roaming",
+   "source": "Public FAQ (synthetic extension)",
+   "synthetic": true,
+   "priority": 2
+  },
+  {
+   "id": "TK-001",
+   "type": "ticket",
+   "title": "No internet access",
+   "text": "Past resolved case (connectivity): No internet access.\nSymptom: Customer reports complete loss of mobile internet after switching from 3G to 4G mode.\nHow it was handled: Guided customer to toggle airplane mode and reset APN settings. Internet restored after APN was reset to default (internet.telecom.example).",
+   "category": "connectivity",
+   "source": "Resolved support ticket",
+   "synthetic": false,
+   "priority": 1
+  },
+  {
+   "id": "TK-002",
+   "type": "ticket",
+   "title": "Intermittent signal drops",
+   "text": "Past resolved case (connectivity): Intermittent signal drops.\nSymptom: Customer in a suburban area experiences signal dropping to zero several times per day, affecting both calls and data.\nHow it was handled: Network team identified a faulty sector antenna on the nearest tower. Temporary fix applied remotely; full hardware replacement scheduled within 48 hours.",
+   "category": "connectivity",
+   "source": "Resolved support ticket",
+   "synthetic": false,
+   "priority": 1
+  },
+  {
+   "id": "TK-003",
+   "type": "ticket",
+   "title": "Data balance not updating",
+   "text": "Past resolved case (data): Data balance not updating.\nSymptom: Customer purchased a 5 GB add-on pack but the balance still shows the old figure in the app.\nHow it was handled: Billing system had a 30-minute sync delay. Refreshed the customer's session token via backend. Balance updated correctly after cache clear.",
+   "category": "data",
+   "source": "Resolved support ticket",
+   "synthetic": false,
+   "priority": 1
+  },
+  {
+   "id": "TK-004",
+   "type": "ticket",
+   "title": "Unexpected roaming charges",
+   "text": "Past resolved case (roaming): Unexpected roaming charges.\nSymptom: Customer returned from a trip to Spain and received a bill $240 higher than expected. Claims they had a roaming bundle active.\nHow it was handled: Investigated and found the roaming bundle was activated 3 hours after the customer's first data session abroad. Charges prior to bundle activation were billed at standard rates.",
+   "category": "roaming",
+   "source": "Resolved support ticket",
+   "synthetic": false,
+   "priority": 1
+  },
+  {
+   "id": "TK-005",
+   "type": "ticket",
+   "title": "SIM card not recognised after phone update",
+   "text": "Past resolved case (sim): SIM card not recognised after phone update.\nSymptom: Customer updated their Android phone and immediately got a 'SIM not provisioned' error.\nHow it was handled: Soft-provisioned the SIM remotely via the BSS. Error resolved within 10 minutes without customer needing to visit a store.",
+   "category": "sim",
+   "source": "Resolved support ticket",
+   "synthetic": false,
+   "priority": 1
+  },
+  {
+   "id": "TK-006",
+   "type": "ticket",
+   "title": "Double charged for monthly plan",
+   "text": "Past resolved case (billing): Double charged for monthly plan.\nSymptom: Customer's bank statement shows two identical charges of $45 on the same date.\nHow it was handled: Duplicate charge caused by a payment gateway retry during a network timeout. Confirmed only one payment received on our side.",
+   "category": "billing",
+   "source": "Resolved support ticket",
+   "synthetic": false,
+   "priority": 1
+  },
+  {
+   "id": "TK-007",
+   "type": "ticket",
+   "title": "Calls going straight to voicemail",
+   "text": "Past resolved case (voice): Calls going straight to voicemail.\nSymptom: All incoming calls reach voicemail immediately even though the phone shows full signal and is not on Do Not Disturb.\nHow it was handled: Call barring had been activated on the account without the customer's knowledge. Deactivated call barring remotely via the HLR. Advised customer to set a new call barring PIN.",
+   "category": "voice",
+   "source": "Resolved support ticket",
+   "synthetic": false,
+   "priority": 1
+  },
+  {
+   "id": "TK-008",
+   "type": "ticket",
+   "title": "Extremely slow 4G speeds (below 1 Mbps)",
+   "text": "Past resolved case (connectivity): Extremely slow 4G speeds (below 1 Mbps).\nSymptom: Customer's speed test consistently shows 0.3-0.8 Mbps download on 4G in a city centre location.\nHow it was handled: Identified the local cell as congested during peak hours (5-8 pm). Enabled carrier aggregation on the customer's profile to utilise a secondary band. Speeds improved to 12-18 Mbps in follow-up test.",
+   "category": "connectivity",
+   "source": "Resolved support ticket",
+   "synthetic": false,
+   "priority": 1
+  },
+  {
+   "id": "TK-009",
+   "type": "ticket",
+   "title": "eSIM activation failing",
+   "text": "Past resolved case (sim): eSIM activation failing.\nSymptom: Customer purchased an iPhone 15 and is unable to complete eSIM activation - the QR code scan fails each time.\nHow it was handled: QR code had a single-use expiry that was triggered during a failed attempt. Generated a fresh eSIM provisioning code via the eSIM portal and emailed it to the customer. Activation succeeded on second attempt.",
+   "category": "sim",
+   "source": "Resolved support ticket",
+   "synthetic": false,
+   "priority": 1
+  },
+  {
+   "id": "TK-010",
+   "type": "ticket",
+   "title": "Unable to view itemised bill",
+   "text": "Past resolved case (billing): Unable to view itemised bill.\nSymptom: Customer cannot download the PDF bill - the download button spins indefinitely.\nHow it was handled: Known bug in the web portal affecting accounts with more than 500 itemised events per cycle. Sent the itemised bill manually as a password-protected PDF via email as a workaround. Escalated the portal bug to the engineering team.",
+   "category": "billing",
+   "source": "Resolved support ticket",
+   "synthetic": false,
+   "priority": 1
+  },
+  {
+   "id": "TK-011",
+   "type": "ticket",
+   "title": "Phone not compatible with VoLTE",
+   "text": "Past resolved case (device): Phone not compatible with VoLTE.\nSymptom: Customer's new handset shows voice calls on 3G even though the SIM and plan support VoLTE.\nHow it was handled: Checked the device IMEI against the VoLTE whitelist - handset model was a parallel import not on the approved list. Explained the limitation and offered an upgrade deal. Customer declined and accepted the 3G voice fallback.",
+   "category": "device",
+   "source": "Resolved support ticket",
+   "synthetic": false,
+   "priority": 1
+  },
+  {
+   "id": "TK-012",
+   "type": "ticket",
+   "title": "No service while abroad in Japan",
+   "text": "Past resolved case (roaming): No service while abroad in Japan.\nSymptom: Customer with international roaming enabled has no signal at all while in Tokyo.\nHow it was handled: Customer's plan had roaming enabled for Europe only. Extended roaming permissions to include Asia-Pacific region. Service restored within 15 minutes. Added a Japan daily bundle at customer's request.",
+   "category": "roaming",
+   "source": "Resolved support ticket",
+   "synthetic": false,
+   "priority": 1
+  },
+  {
+   "id": "TK-013",
+   "type": "ticket",
+   "title": "Cannot log in to the MyTelecom app",
+   "text": "Past resolved case (account): Cannot log in to the MyTelecom app.\nSymptom: Customer forgot their password and the reset email is not arriving.\nHow it was handled: Reset email was going to the customer's old email address on file. Verified identity via security questions, updated email address, and manually triggered the password reset. Customer logged in successfully.",
+   "category": "account",
+   "source": "Resolved support ticket",
+   "synthetic": false,
+   "priority": 1
+  },
+  {
+   "id": "TK-014",
+   "type": "ticket",
+   "title": "Hotspot not working on unlimited plan",
+   "text": "Past resolved case (data): Hotspot not working on unlimited plan.\nSymptom: Customer's unlimited plan should include hotspot but tethering is blocked by their device.\nHow it was handled: The plan's hotspot feature requires a specific APN configuration for tethering. Sent step-by-step APN settings for the customer's Android device. Hotspot functional after settings update.",
+   "category": "data",
+   "source": "Resolved support ticket",
+   "synthetic": false,
+   "priority": 1
+  },
+  {
+   "id": "TK-015",
+   "type": "ticket",
+   "title": "Network outage affecting whole street",
+   "text": "Past resolved case (connectivity): Network outage affecting whole street.\nSymptom: Multiple customers on the same street report total loss of service since 6 am.\nHow it was handled: Major fibre backhaul cut reported by the field team at a junction box 2 km from the affected area. Repair crew dispatched; ETA 4 hours. Affected customers sent proactive SMS update. Service restored after 3 hours 20 minutes.",
+   "category": "connectivity",
+   "source": "Resolved support ticket",
+   "synthetic": false,
+   "priority": 1
+  },
+  {
+   "id": "TK-016",
+   "type": "ticket",
+   "title": "Plan auto-renewed at wrong price",
+   "text": "Past resolved case (billing): Plan auto-renewed at wrong price.\nSymptom: Customer's plan renewed at $55 instead of the promotional rate of $40 they signed up for.\nHow it was handled: Promotional pricing period had expired per the original 12-month contract terms. Customer was unaware.",
+   "category": "billing",
+   "source": "Resolved support ticket",
+   "synthetic": false,
+   "priority": 1
+  },
+  {
+   "id": "TK-017",
+   "type": "ticket",
+   "title": "Echo on every call",
+   "text": "Past resolved case (voice): Echo on every call.\nSymptom: Customer hears their own voice echoed back with a 1-second delay on all outgoing calls.\nHow it was handled: Echo caused by a misconfigured echo cancellation setting on the local RNC. Reconfigured remotely. Customer confirmed echo resolved on a test call.",
+   "category": "voice",
+   "source": "Resolved support ticket",
+   "synthetic": false,
+   "priority": 1
+  },
+  {
+   "id": "TK-018",
+   "type": "ticket",
+   "title": "Number port taking too long",
+   "text": "Past resolved case (sim): Number port taking too long.\nSymptom: Customer submitted a port-in request 6 hours ago and the number is still active on the old provider.\nHow it was handled: Old provider had placed an admin hold on the number due to an outstanding balance. Advised customer to settle the balance with the old provider. Port completed within 1 hour of balance clearance.",
+   "category": "sim",
+   "source": "Resolved support ticket",
+   "synthetic": false,
+   "priority": 1
+  },
+  {
+   "id": "TK-019",
+   "type": "ticket",
+   "title": "Background apps consuming all mobile data",
+   "text": "Past resolved case (data): Background apps consuming all mobile data.\nSymptom: Customer used 8 GB of data in 3 days and believes their apps are syncing in the background without consent.\nHow it was handled: Reviewed data usage breakdown - a cloud backup app had uploaded 6.2 GB. Educated customer on restricting background data per app in Android settings. Enabled Data Saver mode on the account as a safeguard.",
+   "category": "data",
+   "source": "Resolved support ticket",
+   "synthetic": false,
+   "priority": 1
+  },
+  {
+   "id": "TK-020",
+   "type": "ticket",
+   "title": "Unauthorised plan change on account",
+   "text": "Past escalated case (account): Unauthorised plan change on account.\nSymptom: Customer noticed their plan was downgraded from $60 to $30 without their authorisation.\nHow it was handled: Audit log shows the change was made via the self-service portal from an unrecognised IP. Suspected account compromise. Reset credentials, enabled 2-factor authentication, reversed the plan change, and filed a security incident report.",
+   "category": "account",
+   "source": "Escalated support ticket",
+   "synthetic": false,
+   "priority": 1
+  },
+  {
+   "id": "GUIDE-1.1",
+   "type": "guide",
+   "title": "Introduction to Mobile Networks - Overview",
+   "text": "Mobile networks have evolved through several generations, each offering significant improvements in speed, capacity, and capability. 2G (GSM) networks introduced digital voice and basic data services such as SMS. Data speeds were limited to around 50 kbps, sufficient only for text messaging and simple email. 3G (UMTS/HSPA) networks brought mobile broadband, enabling video calls, mobile internet browsing, and app downloads at speeds of 1-14 Mbps. This generation established the foundation for smartphone adoption worldwide. 4G (LTE) networks delivered a major leap forward, with typical download speeds of 20-150 Mbps and latency below 50 ms. LTE networks are fully IP-based, meaning voice calls are transmitted as data (VoLTE) rather than over a separate circuit-switched channel. LTE-Advanced (LTE-A) uses carrier aggregation to combine multiple frequency bands, pushing speeds beyond 300 Mbps. 5G networks represent the current frontier. Deploying across sub-6 GHz and millimetre-wave (mmWave) spectrum, 5G targets peak speeds of 10 Gbps, latency under 1 ms, and the ability to connect up to one million devices per square kilometre. This density makes 5G critical for IoT deployments, autonomous vehicles, and smart city infrastructure. Network coverage depends on the frequency band used. Lower frequencies (700 MHz, 800 MHz) travel farther and penetrate buildings better but carry less data. Higher frequencies (2.6 GHz, mmWave) carry more data but have shorter range and are blocked more easily by walls and obstacles. Modern networks use a combination of bands to balance coverage and capacity.",
+   "category": "Introduction to Mobile Networks",
+   "source": "Technical Reference Guide v3.2, p.2",
+   "synthetic": false,
+   "priority": 3
+  },
+  {
+   "id": "GUIDE-2.1",
+   "type": "guide",
+   "title": "Troubleshooting Connectivity Issues - Overview",
+   "text": "Connectivity problems are the most common category of customer complaints. A structured diagnostic approach resolves the majority of cases without escalation.",
+   "category": "Troubleshooting Connectivity Issues",
+   "source": "Technical Reference Guide v3.2, p.3",
+   "synthetic": false,
+   "priority": 3
+  },
+  {
+   "id": "GUIDE-2.2",
+   "type": "guide",
+   "title": "Troubleshooting Connectivity Issues - Step 1 - Verify signal strength",
+   "text": "Step 1 - Verify signal strength. Open the device's status bar or dial *3001#12345#* (iOS) or use a network signal app (Android) to view the raw signal level in dBm. A signal above -85 dBm is good; between -85 and -100 dBm is marginal; below -100 dBm is poor. If signal is weak, moving closer to a window or to a higher floor often helps.",
+   "category": "Troubleshooting Connectivity Issues",
+   "source": "Technical Reference Guide v3.2, p.3",
+   "synthetic": false,
+   "priority": 3
+  },
+  {
+   "id": "GUIDE-2.3",
+   "type": "guide",
+   "title": "Troubleshooting Connectivity Issues - Step 2 - Rule out a temporary network glitch",
+   "text": "Step 2 - Rule out a temporary network glitch. Toggle airplane mode on for 10 seconds then off. This forces the device to re-register on the network, which resolves many transient issues.",
+   "category": "Troubleshooting Connectivity Issues",
+   "source": "Technical Reference Guide v3.2, p.3",
+   "synthetic": false,
+   "priority": 3
+  },
+  {
+   "id": "GUIDE-2.4",
+   "type": "guide",
+   "title": "Troubleshooting Connectivity Issues - Step 3 - Check APN settings",
+   "text": "Step 3 - Check APN settings. The Access Point Name (APN) tells the device how to connect to the carrier's data network. Incorrect APN settings are a common cause of data connectivity failure after a phone reset or SIM swap. Navigate to Settings > Mobile Network > APN and verify the APN name, username, and password match the carrier's published settings.",
+   "category": "Troubleshooting Connectivity Issues",
+   "source": "Technical Reference Guide v3.2, p.3",
+   "synthetic": false,
+   "priority": 3
+  },
+  {
+   "id": "GUIDE-2.5",
+   "type": "guide",
+   "title": "Troubleshooting Connectivity Issues - Step 4 - Inspect the SIM",
+   "text": "Step 4 - Inspect the SIM. Power off the device, remove the SIM, clean the gold contacts with a dry cloth, and reseat it firmly. A partially seated SIM can cause intermittent connectivity.",
+   "category": "Troubleshooting Connectivity Issues",
+   "source": "Technical Reference Guide v3.2, p.3",
+   "synthetic": false,
+   "priority": 3
+  },
+  {
+   "id": "GUIDE-2.6",
+   "type": "guide",
+   "title": "Troubleshooting Connectivity Issues - Step 5 - Check for a network outage",
+   "text": "Step 5 - Check for a network outage. Consult the carrier's live status page or app. If an outage is confirmed, no device-level action will restore service; the customer must wait for resolution.",
+   "category": "Troubleshooting Connectivity Issues",
+   "source": "Technical Reference Guide v3.2, p.3",
+   "synthetic": false,
+   "priority": 3
+  },
+  {
+   "id": "GUIDE-2.7",
+   "type": "guide",
+   "title": "Troubleshooting Connectivity Issues - Step 6 - Test with another SIM or device",
+   "text": "Step 6 - Test with another SIM or device. Swapping the SIM into a different handset confirms whether the issue is with the SIM/network or the device hardware. A faulty antenna or damaged SIM slot requires device repair.",
+   "category": "Troubleshooting Connectivity Issues",
+   "source": "Technical Reference Guide v3.2, p.3",
+   "synthetic": false,
+   "priority": 3
+  },
+  {
+   "id": "GUIDE-3.1",
+   "type": "guide",
+   "title": "Understanding Data Plans and Fair Use Policy - Overview",
+   "text": "Data plans define how much high-speed data a customer can consume per billing cycle. Understanding plan mechanics helps agents resolve billing disputes and set correct customer expectations.",
+   "category": "Understanding Data Plans and Fair Use Policy",
+   "source": "Technical Reference Guide v3.2, p.4",
+   "synthetic": false,
+   "priority": 3
+  },
+  {
+   "id": "GUIDE-3.2",
+   "type": "guide",
+   "title": "Understanding Data Plans and Fair Use Policy - High-Speed Data Allowance",
+   "text": "High-Speed Data Allowance: Each plan includes a fixed high-speed data allowance (e.g. 20 GB, 50 GB, or Unlimited). Once this allowance is consumed, the account is throttled to a reduced speed - typically 512 kbps on standard plans and 1 Mbps on premium plans - for the remainder of the billing cycle. Throttled speeds allow continued internet use but are unsuitable for video streaming or large downloads.",
+   "category": "Understanding Data Plans and Fair Use Policy",
+   "source": "Technical Reference Guide v3.2, p.4",
+   "synthetic": false,
+   "priority": 3
+  },
+  {
+   "id": "GUIDE-3.3",
+   "type": "guide",
+   "title": "Understanding Data Plans and Fair Use Policy - Unlimited Plans and Fair Use",
+   "text": "Unlimited Plans and Fair Use: Plans marketed as \"unlimited\" are subject to a Fair Use Policy (FUP). Customers who consume an unusually large volume of data - typically above 100 GB per cycle - may be deprioritised during periods of network congestion. Deprioritisation is temporary and only applied when the customer is connected to a congested cell; it does not affect customers in uncongested areas.",
+   "category": "Understanding Data Plans and Fair Use Policy",
+   "source": "Technical Reference Guide v3.2, p.4",
+   "synthetic": false,
+   "priority": 3
+  },
+  {
+   "id": "GUIDE-3.4",
+   "type": "guide",
+   "title": "Understanding Data Plans and Fair Use Policy - Data Rollover",
+   "text": "Data Rollover: Some plans include a data rollover feature. Unused high-speed data at the end of a billing cycle is carried forward to the next cycle, up to a maximum of one month's allowance. Rolled-over data is consumed before the current cycle's allowance.",
+   "category": "Understanding Data Plans and Fair Use Policy",
+   "source": "Technical Reference Guide v3.2, p.4",
+   "synthetic": false,
+   "priority": 3
+  },
+  {
+   "id": "GUIDE-3.5",
+   "type": "guide",
+   "title": "Understanding Data Plans and Fair Use Policy - Add-On Data Packs",
+   "text": "Add-On Data Packs: Customers who exhaust their high-speed allowance mid-cycle can purchase add-on data packs to restore full speeds. Packs activate immediately upon purchase and are valid until the end of the current billing cycle. Unused add-on data does not roll over.",
+   "category": "Understanding Data Plans and Fair Use Policy",
+   "source": "Technical Reference Guide v3.2, p.4",
+   "synthetic": false,
+   "priority": 3
+  },
+  {
+   "id": "GUIDE-3.6",
+   "type": "guide",
+   "title": "Understanding Data Plans and Fair Use Policy - Hotspot (Tethering) Usage",
+   "text": "Hotspot (Tethering) Usage: Hotspot usage draws from the same data allowance as device usage. However, some plans include a separate hotspot sub-allowance. Once the hotspot sub-allowance is exhausted, hotspot speeds are throttled even if device data remains available. Enterprise and business plans typically have higher or uncapped hotspot allowances.",
+   "category": "Understanding Data Plans and Fair Use Policy",
+   "source": "Technical Reference Guide v3.2, p.4",
+   "synthetic": false,
+   "priority": 3
+  },
+  {
+   "id": "GUIDE-3.7",
+   "type": "guide",
+   "title": "Understanding Data Plans and Fair Use Policy - Data Usage Monitoring",
+   "text": "Data Usage Monitoring: Customers can monitor real-time usage in the MyTelecom app. Push notifications are sent at 80% and 100% of usage. Enabling data usage alerts at the OS level provides an additional safeguard against unexpected overages.",
+   "category": "Understanding Data Plans and Fair Use Policy",
+   "source": "Technical Reference Guide v3.2, p.4",
+   "synthetic": false,
+   "priority": 3
+  },
+  {
+   "id": "GUIDE-4.1",
+   "type": "guide",
+   "title": "International Roaming - How It Works - Overview",
+   "text": "When a customer travels outside the home network's coverage area, their device connects to a partner network in the visited country. This is called roaming. Understanding the roaming architecture helps agents diagnose roaming failures and billing issues.",
+   "category": "International Roaming - How It Works",
+   "source": "Technical Reference Guide v3.2, p.5",
+   "synthetic": false,
+   "priority": 3
+  },
+  {
+   "id": "GUIDE-4.2",
+   "type": "guide",
+   "title": "International Roaming - How It Works - Technical Mechanism",
+   "text": "Technical Mechanism: The visited network authenticates the customer via an inter-operator signalling protocol (SS7 or Diameter). The home network validates the subscription and authorises service. All data, voice, and SMS traffic is tunnelled back to the home network for billing. This tunnelling adds latency compared to local network usage.",
+   "category": "International Roaming - How It Works",
+   "source": "Technical Reference Guide v3.2, p.5",
+   "synthetic": false,
+   "priority": 3
+  },
+  {
+   "id": "GUIDE-4.3",
+   "type": "guide",
+   "title": "International Roaming - How It Works - Roaming Zones",
+   "text": "Roaming Zones: Our network divides the world into roaming zones based on inter-operator agreements and cost structures. Zone A (EU, UK, Australia, New Zealand) has the lowest roaming rates. Zone B (USA, Canada, Japan, Singapore) has moderate rates. Zone C (Rest of World) has the highest per-MB and per-minute charges. Customers should always purchase a roaming bundle before travelling to Zone B or C countries to avoid bill shock.",
+   "category": "International Roaming - How It Works",
+   "source": "Technical Reference Guide v3.2, p.5",
+   "synthetic": false,
+   "priority": 3
+  },
+  {
+   "id": "GUIDE-4.4",
+   "type": "guide",
+   "title": "International Roaming - How It Works - Activating Roaming",
+   "text": "Activating Roaming: Roaming must be enabled on the account before departure. The customer can toggle it in the MyTelecom app under Plan & Services > International Roaming or by calling 611. Network-level activation takes up to 15 minutes. If a customer enables roaming after landing abroad, they may receive a brief period of no service while the HLR record is updated.",
+   "category": "International Roaming - How It Works",
+   "source": "Technical Reference Guide v3.2, p.5",
+   "synthetic": false,
+   "priority": 3
+  },
+  {
+   "id": "GUIDE-4.5",
+   "type": "guide",
+   "title": "International Roaming - How It Works - Roaming Bundles",
+   "text": "Roaming Bundles: Bundles are purchased for a specific destination or zone and are valid for the calendar days selected. A daily bundle covers midnight to midnight in the home timezone. Customers who activate a bundle after using some data on the day will still be charged the bundle price, but any pre-bundle usage at standard rates is not reversed.",
+   "category": "International Roaming - How It Works",
+   "source": "Technical Reference Guide v3.2, p.5",
+   "synthetic": false,
+   "priority": 3
+  },
+  {
+   "id": "GUIDE-4.6",
+   "type": "guide",
+   "title": "International Roaming - How It Works - Common Roaming Failures",
+   "text": "Common Roaming Failures: The three most common reasons a customer has no service abroad are: (1) roaming not enabled on the account, (2) device not configured for automatic network selection - navigate to Settings > Mobile Network > Network Selection > Automatic, (3) the visited country is not covered by our roaming agreements. Always check the coverage map before travel.",
+   "category": "International Roaming - How It Works",
+   "source": "Technical Reference Guide v3.2, p.5",
+   "synthetic": false,
+   "priority": 3
+  },
+  {
+   "id": "GUIDE-5.1",
+   "type": "guide",
+   "title": "SIM Card Technology - Overview",
+   "text": "The Subscriber Identity Module (SIM) is the secure element that identifies a customer on the network. It stores the International Mobile Subscriber Identity (IMSI), authentication keys, and basic service configuration.",
+   "category": "SIM Card Technology",
+   "source": "Technical Reference Guide v3.2, p.6",
+   "synthetic": false,
+   "priority": 3
+  },
+  {
+   "id": "GUIDE-5.2",
+   "type": "guide",
+   "title": "SIM Card Technology - Form Factors",
+   "text": "Form Factors: SIM cards have evolved from the original credit-card-sized (1FF) format through mini-SIM (2FF), micro-SIM (3FF), and nano-SIM (4FF). Today the vast majority of smartphones use nano-SIM. Some industrial IoT devices still use the larger 2FF format for robustness.",
+   "category": "SIM Card Technology",
+   "source": "Technical Reference Guide v3.2, p.6",
+   "synthetic": false,
+   "priority": 3
+  },
+  {
+   "id": "GUIDE-5.3",
+   "type": "guide",
+   "title": "SIM Card Technology - eSIM",
+   "text": "eSIM: The embedded SIM (eSIM) is a chip soldered directly into the device during manufacture. Unlike a physical SIM it can be reprogrammed over the air. The customer receives a QR code or activation code that loads a profile onto the eSIM. eSIM supports multiple profiles simultaneously, allowing the user to switch between carriers or maintain a local SIM while roaming without physically swapping cards. Most flagship smartphones since 2020 support eSIM.",
+   "category": "SIM Card Technology",
+   "source": "Technical Reference Guide v3.2, p.6",
+   "synthetic": false,
+   "priority": 3
+  },
+  {
+   "id": "GUIDE-5.4",
+   "type": "guide",
+   "title": "SIM Card Technology - iSIM",
+   "text": "iSIM: The integrated SIM (iSIM) goes a step further by integrating the SIM functionality directly into the device's main SoC (System-on-Chip). iSIM reduces device size and power consumption further than eSIM and is common in smartwatches and IoT devices.",
+   "category": "SIM Card Technology",
+   "source": "Technical Reference Guide v3.2, p.6",
+   "synthetic": false,
+   "priority": 3
+  },
+  {
+   "id": "GUIDE-5.5",
+   "type": "guide",
+   "title": "SIM Card Technology - SIM Swap Fraud",
+   "text": "SIM Swap Fraud: SIM swap attacks occur when a fraudster convinces a carrier to transfer a victim's number to a new SIM. This allows the attacker to intercept SMS-based two-factor authentication messages. In-store requests require government-issued photo ID. Remote requests require multi-factor identity confirmation.",
+   "category": "SIM Card Technology",
+   "source": "Technical Reference Guide v3.2, p.6",
+   "synthetic": false,
+   "priority": 3
+  },
+  {
+   "id": "GUIDE-6.1",
+   "type": "guide",
+   "title": "VoLTE, VoWiFi, and Advanced Voice Services - Overview",
+   "text": "Voice over LTE (VoLTE) and Voice over Wi-Fi (VoWiFi) are IP-based voice technologies that replace the legacy circuit-switched voice channel used in 2G and 3G networks.",
+   "category": "VoLTE, VoWiFi, and Advanced Voice Services",
+   "source": "Technical Reference Guide v3.2, p.7",
+   "synthetic": false,
+   "priority": 3
+  },
+  {
+   "id": "GUIDE-6.2",
+   "type": "guide",
+   "title": "VoLTE, VoWiFi, and Advanced Voice Services - VoLTE",
+   "text": "VoLTE: With VoLTE, voice calls are transmitted as data packets over the LTE network using the IMS (IP Multimedia Subsystem) core. Benefits include HD voice quality (wideband audio at 16 kHz versus the 3.4 kHz of legacy calls), faster call setup times (under 2 seconds versus 6-8 seconds on 3G), and the ability to use data and voice simultaneously without degradation. VoLTE requires a compatible device, a VoLTE-enabled SIM, and an account that has VoLTE activated.",
+   "category": "VoLTE, VoWiFi, and Advanced Voice Services",
+   "source": "Technical Reference Guide v3.2, p.7",
+   "synthetic": false,
+   "priority": 3
+  },
+  {
+   "id": "GUIDE-6.3",
+   "type": "guide",
+   "title": "VoLTE, VoWiFi, and Advanced Voice Services - Enabling VoLTE",
+   "text": "Enabling VoLTE: On most Android devices navigate to Settings > Mobile Network > VoLTE and toggle it on. On iPhone go to Settings > Mobile Data > Mobile Data Options > Voice & Data and select LTE. If the option is absent the device may not support VoLTE or the profile has not been pushed to the SIM.",
+   "category": "VoLTE, VoWiFi, and Advanced Voice Services",
+   "source": "Technical Reference Guide v3.2, p.7",
+   "synthetic": false,
+   "priority": 3
+  },
+  {
+   "id": "GUIDE-6.4",
+   "type": "guide",
+   "title": "VoLTE, VoWiFi, and Advanced Voice Services - VoWiFi (Wi-Fi Calling)",
+   "text": "VoWiFi (Wi-Fi Calling): VoWiFi extends IMS calling over any Wi-Fi network, including home broadband and public hotspots. This is especially valuable in areas with poor indoor cellular coverage. Calls seamlessly hand off between Wi-Fi and cellular as the customer moves, without dropping. Emergency calls over VoWiFi require the customer to register a fixed address for location purposes.",
+   "category": "VoLTE, VoWiFi, and Advanced Voice Services",
+   "source": "Technical Reference Guide v3.2, p.7",
+   "synthetic": false,
+   "priority": 3
+  },
+  {
+   "id": "GUIDE-6.5",
+   "type": "guide",
+   "title": "VoLTE, VoWiFi, and Advanced Voice Services - Quality of Service",
+   "text": "Quality of Service: IMS networks apply Quality of Service (QoS) markings to voice packets, ensuring they are prioritised over general data traffic. This prevents voice quality degradation during periods of network congestion. Without QoS, voice packets would compete with video streaming and file downloads, causing jitter and packet loss.",
+   "category": "VoLTE, VoWiFi, and Advanced Voice Services",
+   "source": "Technical Reference Guide v3.2, p.7",
+   "synthetic": false,
+   "priority": 3
+  },
+  {
+   "id": "GUIDE-6.6",
+   "type": "guide",
+   "title": "VoLTE, VoWiFi, and Advanced Voice Services - Fallback Behaviour",
+   "text": "Fallback Behaviour: If a VoLTE call cannot be established - for example, because the called party is on a network that does not support VoLTE interconnect - the network automatically falls back to a 3G circuit-switched call. This fallback is transparent to the customer but results in lower audio quality and the loss of simultaneous data capability.",
+   "category": "VoLTE, VoWiFi, and Advanced Voice Services",
+   "source": "Technical Reference Guide v3.2, p.7",
+   "synthetic": false,
+   "priority": 3
+  },
+  {
+   "id": "GUIDE-7.1",
+   "type": "guide",
+   "title": "Billing System Architecture and Common Disputes - Overview",
+   "text": "Understanding how the billing system works helps agents identify the root cause of billing disputes quickly and accurately.",
+   "category": "Billing System Architecture and Common Disputes",
+   "source": "Technical Reference Guide v3.2, p.8",
+   "synthetic": false,
+   "priority": 3
+  },
+  {
+   "id": "GUIDE-7.2",
+   "type": "guide",
+   "title": "Billing System Architecture and Common Disputes - Billing Cycle",
+   "text": "Billing Cycle: Each customer has a monthly billing cycle anchored to their account creation date. At the end of the cycle, the billing engine aggregates all charges, applies any discounts or bundle credits, and generates the invoice. Autopay customers are charged automatically 14 days after invoice generation.",
+   "category": "Billing System Architecture and Common Disputes",
+   "source": "Technical Reference Guide v3.2, p.8",
+   "synthetic": false,
+   "priority": 3
+  },
+  {
+   "id": "GUIDE-7.3",
+   "type": "guide",
+   "title": "Billing System Architecture and Common Disputes - Prepaid vs Postpaid",
+   "text": "Prepaid vs Postpaid: Prepaid accounts are charged in real time - before each call or data session, the system checks the account balance and rejects the session if insufficient credit exists. Postpaid accounts accrue charges throughout the cycle and are billed at the end. Hybrid prepaid-postpaid plans (e.g. pay-monthly with real-time data top-ups) use a combination of both mechanisms.",
+   "category": "Billing System Architecture and Common Disputes",
+   "source": "Technical Reference Guide v3.2, p.8",
+   "synthetic": false,
+   "priority": 3
+  },
+  {
+   "id": "GUIDE-7.4",
+   "type": "guide",
+   "title": "Billing System Architecture and Common Disputes - Common Dispute Types and Resolutions",
+   "text": "Common Dispute Types and Resolutions: - Duplicate charges: Caused by payment gateway retries during network timeouts. The itemised bill shows the exact timestamp of bundle activation versus the first roaming event. - Premium SMS subscriptions: Third-party services can charge customers via the carrier's billing system (Direct Carrier Billing). Customers sometimes subscribe inadvertently via a web click-to-subscribe. Downgrades take effect at the next cycle start. Customers sometimes misunderstand this and expect an immediate credit.",
+   "category": "Billing System Architecture and Common Disputes",
+   "source": "Technical Reference Guide v3.2, p.8",
+   "synthetic": false,
+   "priority": 3
+  },
+  {
+   "id": "GUIDE-7.5",
+   "type": "guide",
+   "title": "Billing System Architecture and Common Disputes - Bill Shock Prevention",
+   "text": "Bill Shock Prevention: The system sends automated alerts at 80% and 100% of plan allowances and when roaming charges exceed $20, $50, and $100 thresholds.",
+   "category": "Billing System Architecture and Common Disputes",
+   "source": "Technical Reference Guide v3.2, p.8",
+   "synthetic": false,
+   "priority": 3
+  },
+  {
+   "id": "GUIDE-8.1",
+   "type": "guide",
+   "title": "Network Security and Fraud Prevention - Overview",
+   "text": "Telecom networks are high-value targets for fraud.",
+   "category": "Network Security and Fraud Prevention",
+   "source": "Technical Reference Guide v3.2, p.9",
+   "synthetic": false,
+   "priority": 3
+  },
+  {
+   "id": "GUIDE-8.2",
+   "type": "guide",
+   "title": "Network Security and Fraud Prevention - SIM Swap Fraud",
+   "text": "SIM Swap Fraud: Described in Section 5. Key mitigation: enforce strict in-person or multi-factor remote identity verification before any SIM replacement. Flag accounts with recent SIM swaps for elevated fraud monitoring for 30 days.",
+   "category": "Network Security and Fraud Prevention",
+   "source": "Technical Reference Guide v3.2, p.9",
+   "synthetic": false,
+   "priority": 3
+  },
+  {
+   "id": "GUIDE-8.3",
+   "type": "guide",
+   "title": "Network Security and Fraud Prevention - Wangiri (One-Ring) Scam",
+   "text": "Wangiri (One-Ring) Scam: Fraudsters make calls that ring once and hang up. The victim calls back out of curiosity and is connected to a premium-rate number. Educating customers not to call back unknown international numbers reduces exposure.",
+   "category": "Network Security and Fraud Prevention",
+   "source": "Technical Reference Guide v3.2, p.9",
+   "synthetic": false,
+   "priority": 3
+  },
+  {
+   "id": "PLAN-PRE-STARTER-5",
+   "type": "plan",
+   "title": "Starter 5 (prepaid)",
+   "text": "NovaCell Starter 5 (prepaid, plan id PRE-STARTER-5). Price: $15 per month. Data: 5 GB. Talk: unlimited. Texts: unlimited. Hotspot (GB): 0. Network: 4G LTE. Contract: none. Features: No credit check; Unlimited talk and text nationwide; Data speeds reduced after 5 GB until next cycle. Best for: Light users who want a cheap, no-commitment plan.",
+   "category": "prepaid",
+   "source": "Plan catalogue (last updated 2026-06-01)",
+   "synthetic": false,
+   "priority": 4
+  },
+  {
+   "id": "PLAN-PRE-VALUE-15",
+   "type": "plan",
+   "title": "Value 15 (prepaid)",
+   "text": "NovaCell Value 15 (prepaid, plan id PRE-VALUE-15). Price: $25 per month. Data: 15 GB. Talk: unlimited. Texts: unlimited. Hotspot (GB): 5. Network: 5G. Contract: none. Features: No credit check; 5G access where available; 5 GB included mobile hotspot; Data speeds reduced after 15 GB until next cycle. Best for: Moderate users who want 5G without a contract.",
+   "category": "prepaid",
+   "source": "Plan catalogue (last updated 2026-06-01)",
+   "synthetic": false,
+   "priority": 4
+  },
+  {
+   "id": "PLAN-PRE-UNLTD",
+   "type": "plan",
+   "title": "Prepaid Unlimited (prepaid)",
+   "text": "NovaCell Prepaid Unlimited (prepaid, plan id PRE-UNLTD). Price: $45 per month. Data: unlimited. Talk: unlimited. Texts: unlimited. Hotspot (GB): 10. Network: 5G. Contract: none. Features: No credit check; Unlimited 5G data; 10 GB included mobile hotspot; Data may be slowed during network congestion after 35 GB. Best for: Heavy users who want unlimited data with no contract.",
+   "category": "prepaid",
+   "source": "Plan catalogue (last updated 2026-06-01)",
+   "synthetic": false,
+   "priority": 4
+  },
+  {
+   "id": "PLAN-POST-ESSENTIAL",
+   "type": "plan",
+   "title": "Essential (postpaid)",
+   "text": "NovaCell Essential (postpaid, plan id POST-ESSENTIAL). Price: $35 per month. Data: 20 GB. Talk: unlimited. Texts: unlimited. Hotspot (GB): 10. Network: 5G. Contract: monthly, cancel anytime. Features: Autopay discount of $5/month included in price; 5G nationwide; 10 GB mobile hotspot; Free spam call blocking. Best for: Single line users who want a reliable postpaid plan.",
+   "category": "postpaid",
+   "source": "Plan catalogue (last updated 2026-06-01)",
+   "synthetic": false,
+   "priority": 4
+  },
+  {
+   "id": "PLAN-POST-UNLIMITED",
+   "type": "plan",
+   "title": "Unlimited (postpaid)",
+   "text": "NovaCell Unlimited (postpaid, plan id POST-UNLIMITED). Price: $60 per month. Data: unlimited. Talk: unlimited. Texts: unlimited. Hotspot (GB): 25. Network: 5G. Contract: monthly, cancel anytime. Features: Truly unlimited 5G data; 25 GB high-speed mobile hotspot; Includes calls and texts to Canada and Mexico; Free spam call blocking. Best for: Single line users who never want to think about data caps.",
+   "category": "postpaid",
+   "source": "Plan catalogue (last updated 2026-06-01)",
+   "synthetic": false,
+   "priority": 4
+  },
+  {
+   "id": "PLAN-POST-UNLIMITED-PLUS",
+   "type": "plan",
+   "title": "Unlimited Plus (postpaid)",
+   "text": "NovaCell Unlimited Plus (postpaid, plan id POST-UNLIMITED-PLUS). Price: $80 per month. Data: unlimited. Talk: unlimited. Texts: unlimited. Hotspot (GB): 50. Network: 5G Ultra Wideband. Contract: monthly, cancel anytime. Features: Premium 5G Ultra Wideband data, never slowed; 50 GB high-speed mobile hotspot; Includes roaming in 210+ countries; Streaming service subscription included; Free device protection for one device. Best for: Power users and frequent travelers who want the top-tier plan.",
+   "category": "postpaid",
+   "source": "Plan catalogue (last updated 2026-06-01)",
+   "synthetic": false,
+   "priority": 4
+  },
+  {
+   "id": "PLAN-FAMILY-UNLIMITED-4",
+   "type": "plan",
+   "title": "Family Unlimited (4 lines) (postpaid)",
+   "text": "NovaCell Family Unlimited (4 lines) (postpaid, plan id FAMILY-UNLIMITED-4). Price: $140 per month. Price per line: $35; lines included: 4. Data: unlimited. Talk: unlimited. Texts: unlimited. Hotspot (GB): 25. Network: 5G. Contract: monthly, cancel anytime. Intro offer: First 3 months 20% off for new accounts. Features: 4 lines of unlimited 5G data; Effective price of $35 per line; 25 GB hotspot per line; Free parental controls and content filtering; Add additional lines for $30/month each. Best for: Families wanting multiple unlimited lines at a lower per-line price.",
+   "category": "family",
+   "source": "Plan catalogue (last updated 2026-06-01)",
+   "synthetic": false,
+   "priority": 4
+  },
+  {
+   "id": "PLAN-DATA-ONLY-30",
+   "type": "plan",
+   "title": "Data-Only 30 (data-only)",
+   "text": "NovaCell Data-Only 30 (data-only, plan id DATA-ONLY-30). Price: $30 per month. Data: 30 GB. Talk: 0. Texts: 0. Hotspot (GB): 30. Network: 5G. Contract: monthly, cancel anytime. Features: Designed for tablets, hotspots, and connected devices; No talk or text included; Full 30 GB usable as hotspot. Best for: Tablets, mobile hotspots, and secondary data devices.",
+   "category": "data-only",
+   "source": "Plan catalogue (last updated 2026-06-01)",
+   "synthetic": false,
+   "priority": 4
+  },
+  {
+   "id": "PLAN-SENIOR-55",
+   "type": "plan",
+   "title": "55+ Plan (postpaid)",
+   "text": "NovaCell 55+ Plan (postpaid, plan id SENIOR-55). Price: $40 per month. Lines included: 2. Data: unlimited. Talk: unlimited. Texts: unlimited. Hotspot (GB): 5. Network: 5G. Contract: monthly, cancel anytime. Eligibility: At least one account holder must be 55 or older. Features: 2 unlimited lines for $40/month total; Simplified billing and large-print statements available; Free scam and spam call protection. Best for: Customers 55+ who want two unlimited lines at a low price.",
+   "category": "specialty",
+   "source": "Plan catalogue (last updated 2026-06-01)",
+   "synthetic": false,
+   "priority": 4
+  },
+  {
+   "id": "PLAN-STUDENT-UNLTD",
+   "type": "plan",
+   "title": "Student Unlimited (postpaid)",
+   "text": "NovaCell Student Unlimited (postpaid, plan id STUDENT-UNLTD). Price: $30 per month. Data: unlimited. Talk: unlimited. Texts: unlimited. Hotspot (GB): 15. Network: 5G. Contract: monthly, cancel anytime. Eligibility: Valid enrollment at an accredited college or university; reverify annually. Features: Unlimited 5G data at a student discount; 15 GB hotspot; Streaming service subscription included. Best for: Verified students who want unlimited data on a budget.",
+   "category": "specialty",
+   "source": "Plan catalogue (last updated 2026-06-01)",
+   "synthetic": false,
+   "priority": 4
+  },
+  {
+   "id": "PLAN-ADDON-INTL-DAYPASS",
+   "type": "plan",
+   "title": "International Day Pass (add-on)",
+   "text": "NovaCell International Day Pass (add-on, plan id ADDON-INTL-DAYPASS). Price: $10 per day, per line. Data: uses your plan's high-speed data. Talk: unlimited. Texts: unlimited. Coverage: 210+ countries. Contract: none. Features: Use your existing plan's data, talk, and text abroad; Billed only on days you use your device internationally; Charge capped at 10 days per billing cycle, then included free for the rest of the cycle. Best for: Short international trips where you want to keep your normal number and plan.",
+   "category": "roaming",
+   "source": "Plan catalogue (last updated 2026-06-01)",
+   "synthetic": false,
+   "priority": 4
+  },
+  {
+   "id": "PLAN-ADDON-INTL-MONTHLY",
+   "type": "plan",
+   "title": "International Monthly Pass (add-on)",
+   "text": "NovaCell International Monthly Pass (add-on, plan id ADDON-INTL-MONTHLY). Price: $50 per month, per line. Data: 15 GB. Talk: unlimited. Texts: unlimited. Coverage: 210+ countries. Contract: none, recurring until cancelled. Features: 15 GB of high-speed data abroad each month; Unlimited international talk and text; Better value than the Day Pass for trips longer than 5 days. Best for: Extended travel or expats who need consistent monthly international coverage.",
+   "category": "roaming",
+   "source": "Plan catalogue (last updated 2026-06-01)",
+   "synthetic": false,
+   "priority": 4
+  },
+  {
+   "id": "PLAN-ADDON-INTL-CALLING",
+   "type": "plan",
+   "title": "International Calling Pack (add-on)",
+   "text": "NovaCell International Calling Pack (add-on, plan id ADDON-INTL-CALLING). Price: $15 per month, per line. Coverage: Calls from the US to 80+ countries. Contract: none, recurring until cancelled. Features: Discounted calling from the US to international numbers; Unlimited calls to landlines in 30 included countries; Does not cover usage while you are physically abroad (see roaming passes). Best for: Customers who call family or contacts overseas from within the US.",
+   "category": "roaming",
+   "source": "Plan catalogue (last updated 2026-06-01)",
+   "synthetic": false,
+   "priority": 4
+  },
+  {
+   "id": "PLAN-ADDON-HOTSPOT-BOOST",
+   "type": "plan",
+   "title": "Hotspot Boost (add-on)",
+   "text": "NovaCell Hotspot Boost (add-on, plan id ADDON-HOTSPOT-BOOST). Price: $10 per month, per line. Hotspot (GB): 15. Contract: none, recurring until cancelled. Features: Adds 15 GB of high-speed mobile hotspot data to any eligible plan; Stacks on top of your plan's included hotspot allowance. Best for: Customers who tether laptops or other devices and run out of hotspot data.",
+   "category": "add-on",
+   "source": "Plan catalogue (last updated 2026-06-01)",
+   "synthetic": false,
+   "priority": 4
+  }
+ ]
+}
