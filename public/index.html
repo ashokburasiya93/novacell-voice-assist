@@ -130,13 +130,15 @@ function show(r) {
 
 async function lab() {
   let d;
-  try { d = await (await fetch("asr_results.json")).json(); } catch { $("#lab").innerHTML = `<h1>Speech model comparison</h1><p class="muted">Results appear here after the recorded test clips (10 Hindi, 10 Gujarati, 10 Hinglish/English) are run through each model.</p>`; return; }
-  const cfgs = Object.keys(d.summary);
-  $("#lab").innerHTML = `<h1>Which speech model, and does the product-word hint help?</h1>
-    <p class="muted small">${d.end_to_end.clips} recorded clips. Word error rate (WER) and character error rate (CER): lower is better. Cost is Groq's list price per hour of audio.</p>
-    <table><thead><tr><th>Configuration</th><th class="n">WER Hindi</th><th class="n">WER Gujarati</th><th class="n">WER Hinglish/En</th><th class="n">CER all</th><th class="n">p95</th><th class="n">$/hour</th></tr></thead><tbody>
-    ${cfgs.map((c) => { const s = d.summary[c]; return `<tr><td>${esc(c)}</td><td class="n">${(s["hi-script"].wer * 100).toFixed(1)}%</td><td class="n">${(s.gu.wer * 100).toFixed(1)}%</td><td class="n">${(s["hinglish-en"].wer * 100).toFixed(1)}%</td><td class="n">${(s.all.cer * 100).toFixed(1)}%</td><td class="n">${(s.all.p95_ms / 1000).toFixed(1)} s</td><td class="n">$${c.startsWith("turbo") ? "0.04" : "0.111"}</td></tr>`; }).join("")}</tbody></table>
-    <p style="margin-top:14px"><b>End to end</b> (speech → answer in the caller's language): ${(d.end_to_end.task_success * 100).toFixed(0)}% of clips got the right outcome.</p>`;
+  try { d = await (await fetch("asr_results.json")).json(); } catch { $("#lab").innerHTML = `<p class="muted">Results not available.</p>`; return; }
+  const LBL = { "large-v3+prompt+lang": "Whisper large-v3 + product words + language hint (chosen)", "large-v3+prompt": "large-v3 + product words, auto-detect", "large-v3": "large-v3, auto-detect", "turbo+prompt+lang": "large-v3 turbo + product words + language hint", "turbo": "large-v3 turbo, auto-detect" };
+  const pc = (x) => (x * 100).toFixed(0) + "%";
+  $("#lab").innerHTML = `<h1>Which speech model, and do hints help?</h1>
+    <p class="muted small">30 test clips (10 Hindi, 10 Gujarati, 5 Hinglish, 5 English), synthetic speech from Meta's open-source MMS voices. Character error rate (CER, lower is better) is the fairer measure for Indian scripts; "wrong script" counts Hindi or Gujarati clips written in another alphabet (Urdu, Telugu, Gurmukhi).</p>
+    <table><thead><tr><th>Configuration</th><th class="n">CER Hindi</th><th class="n">CER Gujarati</th><th class="n">WER English</th><th class="n">Wrong script</th><th class="n">$/audio hour</th></tr></thead><tbody>
+    ${Object.entries(d.summary).map(([c, s]) => `<tr${c === "large-v3+prompt+lang" ? ' style="font-weight:700"' : ""}><td>${esc(LBL[c] || c)}</td><td class="n">${pc(s.Hindi.cer)}</td><td class="n">${pc(s.Gujarati.cer)}</td><td class="n">${pc(s.English.wer)}</td><td class="n">${s.All.wrong_script} / 20</td><td class="n">$${c.startsWith("turbo") ? "0.04" : "0.111"}</td></tr>`).join("")}</tbody></table>
+    <p class="small" style="margin-top:12px"><b>What we learned.</b> Without a language hint, Whisper wrote 9 of 20 Hindi and Gujarati clips in the wrong alphabet (Urdu for Hindi; Telugu or Gurmukhi for Gujarati) and once invented an English sentence. The language hint fixed all of them and cut character errors by more than half. The cheaper turbo model ignored the Gujarati hint, so large-v3 stays. The app now re-transcribes with the right language whenever it sees the wrong alphabet.</p>
+    <p class="muted small">Hinglish was spoken from Devanagari and is scored against Latin spelling, so its error rate mostly measures the alphabet, not understanding; it is judged on whether the caller gets the right answer. Synthetic speech is cleaner than real calls: these numbers are optimistic until a pilot with real callers.</p>`;
 }
 </script>
 </body>
