@@ -33,7 +33,6 @@ Metrics: word error rate (WER) by language, character error rate (CER, fairer fo
 
 Without a language hint, Whisper wrote 9 of the 20 Hindi and Gujarati clips in the wrong alphabet (Urdu for Hindi; Telugu or Gurmukhi for Gujarati). The hint fixed every one and cut character errors by more than half. Turbo ignored the Gujarati hint, so large-v3 stays, and the app re-transcribes with the implied language whenever it sees the wrong alphabet. Hinglish is scored against Roman spelling while Whisper writes Devanagari, so it is judged on task success, not WER. Synthetic speech is clean: these numbers are optimistic until a real-caller pilot.
 
-The 54 text cases (task success by language, number fidelity, safety) run next.
 
 ## Answer evals (live, 10 Nov 2026)
 
