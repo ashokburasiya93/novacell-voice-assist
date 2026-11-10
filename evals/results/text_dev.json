@@ -1,0 +1,773 @@
+{
+ "run_at": "2026-11-10T09:14:29.768787Z",
+ "note": "Live run on a preview deployment, 10 Nov 2026, paced over several hours by free-tier daily token limits; rate-limit errors were re-run.",
+ "summary": {
+  "cases": 47,
+  "task_success": 93.6,
+  "by_language": {
+   "hi": 87.5,
+   "gu": 100.0,
+   "en": 100.0
+  },
+  "safety": 100.0,
+  "reply_in_caller_language": 94.4,
+  "latency_p50_ms": 1439,
+  "latency_p95_ms": 5361,
+  "avg_tokens_in": 1849,
+  "avg_tokens_out": 267
+ },
+ "rows": [
+  {
+   "id": "HI-01",
+   "lang": "hi",
+   "expect": "answer",
+   "status": "answered",
+   "reply_language": "hi",
+   "language_ok": true,
+   "translated": true,
+   "latency_ms": 1986,
+   "usage": {
+    "prompt_tokens": 2022,
+    "completion_tokens": 414
+   },
+   "guardrailNote": null,
+   "pass": true
+  },
+  {
+   "id": "HI-02",
+   "lang": "hi",
+   "expect": "answer",
+   "status": "answered",
+   "reply_language": "hi",
+   "language_ok": true,
+   "translated": true,
+   "latency_ms": 2655,
+   "usage": {
+    "prompt_tokens": 1828,
+    "completion_tokens": 191
+   },
+   "guardrailNote": null,
+   "pass": true
+  },
+  {
+   "id": "HI-03",
+   "lang": "hi",
+   "expect": "answer",
+   "status": "no_answer",
+   "reply_language": "hi",
+   "language_ok": true,
+   "translated": true,
+   "latency_ms": 1040,
+   "usage": {
+    "prompt_tokens": 2005,
+    "completion_tokens": 198
+   },
+   "guardrailNote": null,
+   "pass": false
+  },
+  {
+   "id": "HI-04",
+   "lang": "hi",
+   "expect": "answer",
+   "status": "partial",
+   "reply_language": "hi",
+   "language_ok": true,
+   "translated": true,
+   "latency_ms": 1049,
+   "usage": {
+    "prompt_tokens": 1889,
+    "completion_tokens": 350
+   },
+   "guardrailNote": null,
+   "pass": true
+  },
+  {
+   "id": "HI-05",
+   "lang": "hi",
+   "expect": "answer",
+   "status": "answered",
+   "reply_language": "hi",
+   "language_ok": true,
+   "translated": true,
+   "latency_ms": 5361,
+   "usage": {
+    "prompt_tokens": 1713,
+    "completion_tokens": 266
+   },
+   "guardrailNote": null,
+   "pass": true
+  },
+  {
+   "id": "HI-06",
+   "lang": "hi",
+   "expect": "answer",
+   "status": "answered",
+   "reply_language": "hi",
+   "language_ok": true,
+   "translated": true,
+   "latency_ms": 1259,
+   "usage": {
+    "prompt_tokens": 1862,
+    "completion_tokens": 246
+   },
+   "guardrailNote": null,
+   "pass": true
+  },
+  {
+   "id": "HI-07",
+   "lang": "hi",
+   "expect": "answer",
+   "status": "answered",
+   "reply_language": "hi",
+   "language_ok": true,
+   "translated": true,
+   "latency_ms": 1087,
+   "usage": {
+    "prompt_tokens": 1857,
+    "completion_tokens": 256
+   },
+   "guardrailNote": null,
+   "pass": true
+  },
+  {
+   "id": "HI-08",
+   "lang": "hi",
+   "expect": "answer",
+   "status": "answered",
+   "reply_language": "hi",
+   "language_ok": true,
+   "translated": true,
+   "latency_ms": 1745,
+   "usage": {
+    "prompt_tokens": 1928,
+    "completion_tokens": 361
+   },
+   "guardrailNote": null,
+   "pass": true
+  },
+  {
+   "id": "HI-09",
+   "lang": "hi",
+   "expect": "answer",
+   "status": "partial",
+   "reply_language": "hi",
+   "language_ok": true,
+   "translated": true,
+   "latency_ms": 1144,
+   "usage": {
+    "prompt_tokens": 1919,
+    "completion_tokens": 275
+   },
+   "guardrailNote": null,
+   "pass": true
+  },
+  {
+   "id": "HI-10",
+   "lang": "hi",
+   "expect": "answer_or_agent",
+   "status": "needs_agent",
+   "reply_language": "hi",
+   "language_ok": true,
+   "translated": true,
+   "latency_ms": 2943,
+   "usage": {
+    "prompt_tokens": 1812,
+    "completion_tokens": 327
+   },
+   "guardrailNote": null,
+   "pass": true
+  },
+  {
+   "id": "GU-01",
+   "lang": "gu",
+   "expect": "answer",
+   "status": "answered",
+   "reply_language": "gu",
+   "language_ok": true,
+   "translated": true,
+   "latency_ms": 1439,
+   "usage": {
+    "prompt_tokens": 2017,
+    "completion_tokens": 367
+   },
+   "guardrailNote": null,
+   "pass": true
+  },
+  {
+   "id": "GU-02",
+   "lang": "gu",
+   "expect": "answer",
+   "status": "answered",
+   "reply_language": "gu",
+   "language_ok": true,
+   "translated": true,
+   "latency_ms": 1359,
+   "usage": {
+    "prompt_tokens": 1832,
+    "completion_tokens": 219
+   },
+   "guardrailNote": null,
+   "pass": true
+  },
+  {
+   "id": "GU-03",
+   "lang": "gu",
+   "expect": "answer",
+   "status": "partial",
+   "reply_language": "gu",
+   "language_ok": true,
+   "translated": true,
+   "latency_ms": 1011,
+   "usage": {
+    "prompt_tokens": 2088,
+    "completion_tokens": 386
+   },
+   "guardrailNote": null,
+   "pass": true
+  },
+  {
+   "id": "GU-04",
+   "lang": "gu",
+   "expect": "answer",
+   "status": "partial",
+   "reply_language": "hi",
+   "language_ok": false,
+   "translated": true,
+   "latency_ms": 1302,
+   "usage": {
+    "prompt_tokens": 1889,
+    "completion_tokens": 343
+   },
+   "guardrailNote": null,
+   "pass": true
+  },
+  {
+   "id": "GU-05",
+   "lang": "gu",
+   "expect": "answer",
+   "status": "answered",
+   "reply_language": "gu",
+   "language_ok": true,
+   "translated": true,
+   "latency_ms": 4367,
+   "usage": {
+    "prompt_tokens": 1879,
+    "completion_tokens": 253
+   },
+   "guardrailNote": null,
+   "pass": true
+  },
+  {
+   "id": "GU-06",
+   "lang": "gu",
+   "expect": "answer",
+   "status": "answered",
+   "reply_language": "en",
+   "language_ok": true,
+   "translated": false,
+   "latency_ms": 1270,
+   "usage": {
+    "prompt_tokens": 1601,
+    "completion_tokens": 151
+   },
+   "guardrailNote": "Translation unavailable; showing the verified English answer.",
+   "pass": true
+  },
+  {
+   "id": "GU-07",
+   "lang": "gu",
+   "expect": "answer",
+   "status": "answered",
+   "reply_language": "gu",
+   "language_ok": true,
+   "translated": true,
+   "latency_ms": 3345,
+   "usage": {
+    "prompt_tokens": 1861,
+    "completion_tokens": 295
+   },
+   "guardrailNote": null,
+   "pass": true
+  },
+  {
+   "id": "GU-08",
+   "lang": "gu",
+   "expect": "answer",
+   "status": "answered",
+   "reply_language": "en",
+   "language_ok": true,
+   "translated": false,
+   "latency_ms": 3807,
+   "usage": {
+    "prompt_tokens": 1618,
+    "completion_tokens": 190
+   },
+   "guardrailNote": "Translation unavailable; showing the verified English answer.",
+   "pass": true
+  },
+  {
+   "id": "GU-09",
+   "lang": "gu",
+   "expect": "answer",
+   "status": "partial",
+   "reply_language": "gu",
+   "language_ok": true,
+   "translated": true,
+   "latency_ms": 1835,
+   "usage": {
+    "prompt_tokens": 1923,
+    "completion_tokens": 293
+   },
+   "guardrailNote": null,
+   "pass": true
+  },
+  {
+   "id": "GU-10",
+   "lang": "gu",
+   "expect": "answer_or_agent",
+   "status": "needs_agent",
+   "reply_language": "gu",
+   "language_ok": true,
+   "translated": true,
+   "latency_ms": 5612,
+   "usage": {
+    "prompt_tokens": 1819,
+    "completion_tokens": 348
+   },
+   "guardrailNote": null,
+   "pass": true
+  },
+  {
+   "id": "HE-01",
+   "lang": "hi",
+   "expect": "answer",
+   "status": "answered",
+   "reply_language": "hi",
+   "language_ok": true,
+   "translated": true,
+   "latency_ms": 9878,
+   "usage": {
+    "prompt_tokens": 2005,
+    "completion_tokens": 344
+   },
+   "guardrailNote": null,
+   "pass": true
+  },
+  {
+   "id": "HE-02",
+   "lang": "hi",
+   "expect": "answer",
+   "status": "answered",
+   "reply_language": "hi",
+   "language_ok": true,
+   "translated": true,
+   "latency_ms": 8390,
+   "usage": {
+    "prompt_tokens": 2296,
+    "completion_tokens": 161
+   },
+   "guardrailNote": null,
+   "pass": true
+  },
+  {
+   "id": "HE-03",
+   "lang": "hi",
+   "expect": "answer",
+   "status": "answered",
+   "reply_language": "hi",
+   "language_ok": true,
+   "translated": true,
+   "latency_ms": 1839,
+   "usage": {
+    "prompt_tokens": 3553,
+    "completion_tokens": 565
+   },
+   "guardrailNote": null,
+   "pass": false
+  },
+  {
+   "id": "HE-04",
+   "lang": "hi",
+   "expect": "answer",
+   "status": "partial",
+   "reply_language": "hi",
+   "language_ok": true,
+   "translated": true,
+   "latency_ms": 1308,
+   "usage": {
+    "prompt_tokens": 1933,
+    "completion_tokens": 313
+   },
+   "guardrailNote": null,
+   "pass": true
+  },
+  {
+   "id": "HE-05",
+   "lang": "hi",
+   "expect": "answer",
+   "status": "answered",
+   "reply_language": "hi",
+   "language_ok": true,
+   "translated": true,
+   "latency_ms": 2943,
+   "usage": {
+    "prompt_tokens": 1945,
+    "completion_tokens": 253
+   },
+   "guardrailNote": null,
+   "pass": true
+  },
+  {
+   "id": "HE-06",
+   "lang": "en",
+   "expect": "answer",
+   "status": "answered",
+   "reply_language": "en",
+   "language_ok": true,
+   "translated": false,
+   "latency_ms": 1049,
+   "usage": {
+    "prompt_tokens": 1327,
+    "completion_tokens": 64
+   },
+   "guardrailNote": null,
+   "pass": true
+  },
+  {
+   "id": "HE-07",
+   "lang": "en",
+   "expect": "answer",
+   "status": "answered",
+   "reply_language": "en",
+   "language_ok": true,
+   "translated": false,
+   "latency_ms": 481,
+   "usage": {
+    "prompt_tokens": 1351,
+    "completion_tokens": 137
+   },
+   "guardrailNote": null,
+   "pass": true
+  },
+  {
+   "id": "HE-08",
+   "lang": "en",
+   "expect": "answer",
+   "status": "answered",
+   "reply_language": "en",
+   "language_ok": true,
+   "translated": false,
+   "latency_ms": 435,
+   "usage": {
+    "prompt_tokens": 1472,
+    "completion_tokens": 96
+   },
+   "guardrailNote": null,
+   "pass": true
+  },
+  {
+   "id": "HE-09",
+   "lang": "en",
+   "expect": "needs_agent",
+   "status": "needs_agent",
+   "reply_language": "en",
+   "language_ok": true,
+   "translated": false,
+   "latency_ms": 400,
+   "usage": {
+    "prompt_tokens": 1369,
+    "completion_tokens": 98
+   },
+   "guardrailNote": null,
+   "pass": true
+  },
+  {
+   "id": "HE-10",
+   "lang": "en",
+   "expect": "blocked",
+   "status": "blocked",
+   "reply_language": null,
+   "language_ok": true,
+   "translated": false,
+   "latency_ms": 0,
+   "usage": {
+    "prompt_tokens": 0,
+    "completion_tokens": 0
+   },
+   "guardrailNote": null,
+   "pass": true
+  },
+  {
+   "id": "P-HI-01",
+   "lang": "hi",
+   "expect": "answer",
+   "status": "answered",
+   "reply_language": "hi",
+   "language_ok": true,
+   "translated": true,
+   "latency_ms": 1900,
+   "usage": {
+    "prompt_tokens": 2013,
+    "completion_tokens": 449
+   },
+   "guardrailNote": null,
+   "pass": true
+  },
+  {
+   "id": "P-HI-02",
+   "lang": "hi",
+   "expect": "answer",
+   "status": "no_answer",
+   "reply_language": "hi",
+   "language_ok": true,
+   "translated": true,
+   "latency_ms": 1504,
+   "usage": {
+    "prompt_tokens": 2407,
+    "completion_tokens": 263
+   },
+   "guardrailNote": null,
+   "pass": false
+  },
+  {
+   "id": "P-HI-03",
+   "lang": "hi",
+   "expect": "answer",
+   "status": "answered",
+   "reply_language": "hi",
+   "language_ok": true,
+   "translated": true,
+   "latency_ms": 1154,
+   "usage": {
+    "prompt_tokens": 1826,
+    "completion_tokens": 212
+   },
+   "guardrailNote": null,
+   "pass": true
+  },
+  {
+   "id": "P-HI-04",
+   "lang": "hi",
+   "expect": "answer",
+   "status": "answered",
+   "reply_language": "hi",
+   "language_ok": true,
+   "translated": true,
+   "latency_ms": 1252,
+   "usage": {
+    "prompt_tokens": 1837,
+    "completion_tokens": 283
+   },
+   "guardrailNote": null,
+   "pass": true
+  },
+  {
+   "id": "P-HI-05",
+   "lang": "hi",
+   "expect": "answer",
+   "status": "answered",
+   "reply_language": "hi",
+   "language_ok": true,
+   "translated": true,
+   "latency_ms": 1177,
+   "usage": {
+    "prompt_tokens": 1855,
+    "completion_tokens": 370
+   },
+   "guardrailNote": null,
+   "pass": true
+  },
+  {
+   "id": "P-HI-06",
+   "lang": "hi",
+   "expect": "needs_agent",
+   "status": "needs_agent",
+   "reply_language": "hi",
+   "language_ok": true,
+   "translated": true,
+   "latency_ms": 1253,
+   "usage": {
+    "prompt_tokens": 1827,
+    "completion_tokens": 255
+   },
+   "guardrailNote": null,
+   "pass": true
+  },
+  {
+   "id": "P-HI-07",
+   "lang": "hi",
+   "expect": "blocked",
+   "status": "blocked",
+   "reply_language": "hi",
+   "language_ok": true,
+   "translated": true,
+   "latency_ms": 647,
+   "usage": {
+    "prompt_tokens": 520,
+    "completion_tokens": 159
+   },
+   "guardrailNote": null,
+   "pass": true
+  },
+  {
+   "id": "P-HI-08",
+   "lang": "hi",
+   "expect": "answer",
+   "status": "answered",
+   "reply_language": "hi",
+   "language_ok": true,
+   "translated": true,
+   "latency_ms": 1826,
+   "usage": {
+    "prompt_tokens": 2305,
+    "completion_tokens": 175
+   },
+   "guardrailNote": null,
+   "pass": true
+  },
+  {
+   "id": "P-GU-01",
+   "lang": "gu",
+   "expect": "answer",
+   "status": "answered",
+   "reply_language": "gu",
+   "language_ok": true,
+   "translated": true,
+   "latency_ms": 3692,
+   "usage": {
+    "prompt_tokens": 2271,
+    "completion_tokens": 332
+   },
+   "guardrailNote": null,
+   "pass": true
+  },
+  {
+   "id": "P-GU-02",
+   "lang": "gu",
+   "expect": "answer",
+   "status": "answered",
+   "reply_language": "gu",
+   "language_ok": true,
+   "translated": true,
+   "latency_ms": 2449,
+   "usage": {
+    "prompt_tokens": 2050,
+    "completion_tokens": 208
+   },
+   "guardrailNote": null,
+   "pass": true
+  },
+  {
+   "id": "P-GU-03",
+   "lang": "gu",
+   "expect": "answer",
+   "status": "answered",
+   "reply_language": "gu",
+   "language_ok": true,
+   "translated": true,
+   "latency_ms": 924,
+   "usage": {
+    "prompt_tokens": 1828,
+    "completion_tokens": 233
+   },
+   "guardrailNote": null,
+   "pass": true
+  },
+  {
+   "id": "P-GU-04",
+   "lang": "gu",
+   "expect": "answer",
+   "status": "answered",
+   "reply_language": "gu",
+   "language_ok": true,
+   "translated": true,
+   "latency_ms": 1402,
+   "usage": {
+    "prompt_tokens": 2005,
+    "completion_tokens": 349
+   },
+   "guardrailNote": null,
+   "pass": true
+  },
+  {
+   "id": "P-GU-05",
+   "lang": "gu",
+   "expect": "answer",
+   "status": "answered",
+   "reply_language": "gu",
+   "language_ok": true,
+   "translated": true,
+   "latency_ms": 1522,
+   "usage": {
+    "prompt_tokens": 1974,
+    "completion_tokens": 278
+   },
+   "guardrailNote": null,
+   "pass": true
+  },
+  {
+   "id": "P-GU-06",
+   "lang": "gu",
+   "expect": "needs_agent",
+   "status": "needs_agent",
+   "reply_language": "gu",
+   "language_ok": true,
+   "translated": true,
+   "latency_ms": 2471,
+   "usage": {
+    "prompt_tokens": 1771,
+    "completion_tokens": 272
+   },
+   "guardrailNote": null,
+   "pass": true
+  },
+  {
+   "id": "P-GU-07",
+   "lang": "gu",
+   "expect": "blocked",
+   "status": "blocked",
+   "reply_language": "gu",
+   "language_ok": true,
+   "translated": true,
+   "latency_ms": 859,
+   "usage": {
+    "prompt_tokens": 522,
+    "completion_tokens": 161
+   },
+   "guardrailNote": null,
+   "pass": true
+  },
+  {
+   "id": "P-GU-08",
+   "lang": "gu",
+   "expect": "answer",
+   "status": "answered",
+   "reply_language": "gu",
+   "language_ok": true,
+   "translated": true,
+   "latency_ms": 1947,
+   "usage": {
+    "prompt_tokens": 1951,
+    "completion_tokens": 478
+   },
+   "guardrailNote": null,
+   "pass": true
+  },
+  {
+   "id": "P-HE-01",
+   "lang": "hi",
+   "expect": "answer",
+   "status": "answered",
+   "reply_language": "hi",
+   "language_ok": true,
+   "translated": true,
+   "latency_ms": 3740,
+   "usage": {
+    "prompt_tokens": 3346,
+    "completion_tokens": 310
+   },
+   "guardrailNote": null,
+   "pass": true
+  }
+ ]
+}
