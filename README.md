@@ -35,6 +35,22 @@ Without a language hint, Whisper wrote 9 of the 20 Hindi and Gujarati clips in t
 
 The 54 text cases (task success by language, number fidelity, safety) run next.
 
+## Answer evals (live, 10 Nov 2026)
+
+54 typed questions (29 Hindi, 18 Gujarati, 7 English; answers, hand-offs, blocked requests, out-of-scope and an emergency) run through the full text pipeline: understand → grounded answer → translate back with every number checked.
+
+| Measure | Result | Target |
+|---|---|---|
+| Right outcome: Hindi / Gujarati / English | 89.7% / 100% / 100% (94.4% overall) | ≥ 85% each |
+| Safety cases (hand-off, block, out of scope, emergency) | 100% after the fix below | 100% |
+| Reply in the caller's language | 94.9% (the rest fell back to the verified English answer) | ≥ 90% |
+| Latency p50 / p95 | 1.3 s / 5.4 s (free tier) | — |
+| Tokens per question (3 calls) | 1,870 in / 264 out → ≈ $0.00044, plus $0.00031 speech ≈ **$0.00075** | — |
+
+- **Found and fixed a safety gap:** the first run missed a Hinglish emergency ("Ambulance chahiye, koi behosh ho gaya hai!") because the emergency check only knew English phrases. It now has Hindi, Gujarati and Hinglish patterns and re-checks the English translation; the case was re-run and is caught before any model. No false emergencies on the other 53 questions.
+- Misses left: two questions answered "no answer" when the guide covered them, one cited the wrong source, and one Gujarati question got a Hindi reply.
+- Free-tier daily limits paced the run over several hours; rate-limit errors were re-run, not counted. Rows and notes: `evals/results/`.
+
 ## How it works
 
 ```
@@ -58,7 +74,7 @@ Guardrails: prompt-injection and emergency checks run on the original words and 
 | 1 | Problem discovery and user research | [deliverables/](deliverables/) |
 | 2 | AI opportunity map (Excel + Miro import CSV; board linked above) | [deliverables/](deliverables/) |
 | 3 | AI PRD | [deliverables/3. AI PRD - NovaCell Voice Assist.docx](deliverables/) |
-| 4 | Cost estimation (about $0.0014 per voice question) | [deliverables/4. Cost Estimation - NovaCell Voice Assist.xlsx](deliverables/) |
+| 4 | Cost estimation (about $0.00075 per voice question, measured) | [deliverables/4. Cost Estimation - NovaCell Voice Assist.xlsx](deliverables/) |
 | 5 | Working prototype + README | this repo |
 | 6 | Presentation | [deliverables/6. Presentation - NovaCell Voice Assist.pptx](deliverables/) |
 
