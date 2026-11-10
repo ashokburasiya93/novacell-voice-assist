@@ -19,5 +19,10 @@ export default async function handler(req, res) {
     const spare = gap - (Date.now() - t);
     if (spare > 0) await new Promise((x) => setTimeout(x, spare));
   }
+  if (req.query.compact) {
+    // [id, lang, expect, status, reply_language, pass, language_ok, translated, latency_ms, tokens_in, tokens_out, guardrail_note]
+    const t = rows.map((r) => [r.id, r.lang, r.expect, r.status, r.reply_language || null, r.pass ? 1 : 0, r.language_ok ? 1 : 0, r.translated ? 1 : 0, r.latency_ms, r.usage?.prompt_tokens || 0, r.usage?.completion_tokens || 0, r.guardrailNote ? String(r.guardrailNote).slice(0, 80) : null]);
+    return res.status(200).json({ next: from + rows.length, total: SET.length, rows: t });
+  }
   res.status(200).json({ from, next: from + rows.length, total: SET.length, rows });
 }
