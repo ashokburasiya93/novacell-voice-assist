@@ -1,0 +1,5 @@
+HI-06..GU-02 first attempt: 8 errors from free-tier per-minute rate limits (requests 3.5 s apart); re-run 9 s apart
+GU-03 first attempt: rate-limit error; re-run
+HE-03, HE-04 first attempt: rate-limit errors; re-run after a 60 s pause
+HE-05..HE-07 at 06:20 UTC: instant errors (free-tier daily request cap suspected); paused
+06:24-06:29 UTC: remaining 30 cases stopped. Runtime log: Groq gpt-oss-120b and gpt-oss-20b both at the 200,000 tokens-per-day limit; OpenRouter free Gemma rate-limited upstream. Resume after the daily window resets.
